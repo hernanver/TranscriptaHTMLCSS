@@ -1,13 +1,12 @@
 document.querySelectorAll('.language-flags img').forEach(flag => {
-  flag.addEventListener('click', () => {
-    const lang = flag.getAttribute('data-lang');
-    const url = new URL(window.location.href);
-    url.searchParams.set("lang", lang);
-    window.location.href = url.toString();
-  });
-});
-
-(function(){
+      flag.addEventListener('click', () => {
+        const lang = flag.getAttribute('data-lang');
+        const url = new URL(window.location.href);
+        url.searchParams.set("lang", lang);
+        window.location.href = url.toString();
+      });
+    });
+        (function(){
   const btn = document.querySelector('#lang-desktop .lang-btn');
   const menu = document.querySelector('#lang-desktop .lang-menu');
   if (!btn || !menu) return;
@@ -29,8 +28,5 @@ document.querySelectorAll('.language-flags img').forEach(flag => {
     window.location.href = url.toString();
   });
 
-  document.addEventListener('click', () => {
-    menu.style.display = 'none';
-    btn.setAttribute('aria-expanded','false');
-  });
+  document.addEventListener('click', () => { menu.style.display = 'none'; btn.setAttribute('aria-expanded','false'); });
 })();
