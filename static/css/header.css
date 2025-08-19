@@ -303,8 +303,38 @@ header {
     display: none;
   }
 
-  .header-right .icon-btn{
+  /* Oculta todo lo del header-right… */
+  .header-right > * {
     display: none;
   }
+
+  /* …pero muestra estos dos botones */
+  .header-right .menu-btn {
+    display: inline-flex;   /* o flex según tu layout */
+    align-items: center;
+  }
+  .header-right .lang-switcher {
+    display: inline-flex;   /* o block, como prefieras */
+  }
+
+  /* El menú móvil se oculta por defecto */
+  .header-right .mobile-menu {
+    display: none;
+  }
+
+  /* Cuando esté abierto, se muestra */
+  .menu-open .header-right .mobile-menu {
+    display: block;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* que se junten a la derecha */
+    gap: 0; /* ajusta la separación entre idioma y menú */
+    margin-left:1rem;
+  }
+
+
 
 }

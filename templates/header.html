@@ -20,14 +20,6 @@
             </button>
         </a>
 
-        <a href="{{ url_for_lang('registro') }}" class="icon-btn" aria-label="User">
-            <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="11" cy="11" r="10" stroke="#333333" stroke-width="1.5"/>
-                <circle cx="11" cy="8" r="3" fill="#333333"/>
-                <path d="M4 18C4 15 8 13 11 13C14 13 18 15 18 18" fill="#333333"/>
-            </svg>
-        </a>
-
         <div class="lang-switcher desktop-only" id="lang-desktop">
           <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
             <img src="{{ url_for('static', filename='img/flag-' ~ (get_locale() or 'ca') ~ '.svg') }}" alt="Idioma actual" width="20" height="14">
@@ -48,14 +40,19 @@
 
         <!-- Botón menú -->
         <button class="menu-btn" id="menu-toggle">
-                    <!-- Icono hamburguesa -->
-                <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="6" x2="21" y2="6"/>
-                    <line x1="3" y1="12" x2="21" y2="12"/>
-                    <line x1="3" y1="18" x2="21" y2="18"/>
-                </svg>
-                <span class="menu-text">{{ _("Menú") }}</span>
-                <span class="arrow-down">▼</span>
+          <svg class="menu-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none"
+               stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="3" y1="6" x2="21" y2="6"/>
+            <line x1="3" y1="12" x2="21" y2="12"/>
+            <line x1="3" y1="18" x2="21" y2="18"/>
+          </svg>
+          <span class="menu-text">{{ _("Menú") }}</span>
+          <span class="arrow-down">
+            <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.5"
+                    stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </span>
         </button>
 
         <!-- Menú Desktop -->
@@ -118,5 +115,38 @@
             <path d="M29.2 31.1508H27.4129C27.3458 31.1508 27.2917 31.2049 27.2917 31.272C27.2917 31.5752 27.0456 31.8212 26.7424 31.8212H25.7784C25.4751 31.8212 25.2291 31.5752 25.2291 31.272C25.2291 31.2049 25.175 31.1508 25.1079 31.1508H23.5271C23.4131 31.1508 23.3208 31.2431 23.3208 31.3571V34.7611C23.3208 34.8751 23.4131 34.9674 23.5271 34.9674H29.2005C29.3145 34.9674 29.4068 34.8751 29.4068 34.7611V31.3571C29.4068 31.2431 29.3145 31.1508 29.2005 31.1508H29.2ZM24.3518 33.0591C24.0099 33.0591 23.7329 32.7821 23.7329 32.4402C23.7329 32.0982 24.0099 31.8212 24.3518 31.8212C24.6938 31.8212 24.9707 32.0982 24.9707 32.4402C24.9707 32.7821 24.6938 33.0591 24.3518 33.0591ZM27.6842 34.2933C27.5294 34.4176 26.959 34.5945 26.2875 34.6002C26.2828 34.6002 26.2787 34.6002 26.2741 34.6002C26.2694 34.6002 26.2653 34.6002 26.2607 34.6002C25.5891 34.594 25.0187 34.4171 24.864 34.2928C24.7402 34.1535 24.8774 33.9178 25.0517 33.9838C25.2209 34.0478 25.6851 34.2056 26.2735 34.2149C26.862 34.2056 27.3262 34.0483 27.4954 33.9838C27.6697 33.9178 27.8069 34.1535 27.6831 34.2928L27.6842 34.2933ZM28.2716 33.0591C27.9297 33.0591 27.6527 32.7821 27.6527 32.4402C27.6527 32.0982 27.9297 31.8212 28.2716 31.8212C28.6136 31.8212 28.8905 32.0982 28.8905 32.4402C28.8905 32.7821 28.6136 33.0591 28.2716 33.0591Z" fill="#39A9E2"/>
         </svg>
     </div>
+    <script>
+    document.querySelectorAll('.language-flags img').forEach(flag => {
+      flag.addEventListener('click', () => {
+        const lang = flag.getAttribute('data-lang');
+        const url = new URL(window.location.href);
+        url.searchParams.set("lang", lang);
+        window.location.href = url.toString();
+      });
+    });
+        (function(){
+  const btn = document.querySelector('#lang-desktop .lang-btn');
+  const menu = document.querySelector('#lang-desktop .lang-menu');
+  if (!btn || !menu) return;
 
+  btn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = menu.style.display === 'block';
+    menu.style.display = open ? 'none' : 'block';
+    btn.setAttribute('aria-expanded', String(!open));
+  });
+
+  menu.addEventListener('click', (e) => {
+    const a = e.target.closest('a[data-lang]');
+    if (!a) return;
+    e.preventDefault();
+    const lang = a.getAttribute('data-lang');
+    const url = new URL(window.location.href);
+    url.searchParams.set('lang', lang);
+    window.location.href = url.toString();
+  });
+
+  document.addEventListener('click', () => { menu.style.display = 'none'; btn.setAttribute('aria-expanded','false'); });
+})();
+    </script>
 </header>
