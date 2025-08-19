@@ -27,129 +27,6 @@ body {
 .desktop-only { display: block; }
 .mobile-only { display: none; }
 
-header {
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 999;
-  display: flex;
-  justify-content: space-between;
-  position: fixed;
-  align-items: center;
-  background-color: var(--blanc);
-  padding: 1rem 2rem;
-  border-bottom: 0.0625rem var(--blanc);
-  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05);
-}
-
-.header-left {
-  display: flex;
-  align-items: center;
-  gap: 0.625rem;
-}
-
-.logo-icon {
-  width: 4.875rem;
-  height: auto;
-  margin-right: 0.5rem;
-}
-
-.site-title {
-  font-size: 1.2rem;
-  font-weight: bold;
-}
-
-.header-right {
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.menu-btn .menu-icon {
-  display: none;
-}
-
-.menu-btn .menu-text,
-.menu-btn .arrow-down {
-  display: inline;
-}
-
-
-.menu-dropdown.open {
-  display: block;
-}
-.menu-dropdown {
-  display: none;
-  position: absolute;
-  top: 100%; /* debajo del botón */
-  right: 5rem;
-  background-color: var(--agora-blau);
-  border-radius: 0.75rem;
-  padding: 0.75rem 1rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  z-index: 1000;
-  min-width: 220px;
-}
-
-.menu-dropdown a {
-  display: block;
-  color: white;
-  text-decoration: none;
-  padding: 0.5rem 0;
-  font-weight: 500;
-  transition: background-color 0.2s ease-in-out;
-}
-
-
-
-
-.developed-by {
-  position: fixed;
-  bottom: 1.5rem;
-  right: 1.5rem;
-  background-color: var(--blanc);
-  border-radius: 2rem;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
-  padding: 0.5rem 1rem;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  font-size: 0.9rem;
-  color: var(--gris-fosc);
-  z-index: 1000;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 21px;
-  align-items: center;
-}
-
-.developed-by svg {
-  height: 2rem;
-  width: auto;
-}
-
-.icon-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-}
-
-.menu-btn {
-  background-color: var(--buttons);
-  color: var(--blanc);
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 1.25rem;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  gap: 0.3125rem;
-}
-
-.arrow-down {
-  font-size: 0.8rem;
-}
-
 .hero {
   background-image: url('../img/textura-fondo.png');
   background-size: cover;
@@ -176,7 +53,7 @@ header {
   margin-bottom: 1.5rem;
   color: var(--gris-fosc);
   line-height: 1.2;
-  max-width: 40rem;
+  max-width: 60rem;
 }
 
 .subtitle {
@@ -202,6 +79,8 @@ header {
   cursor: pointer;
   font-weight: bold;
   font-size: 1rem;
+
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }
 
 .btn-secondary {
@@ -343,7 +222,7 @@ header {
   font-size: 0.9rem;
   color: var(--gris-mitja);
   line-height: 1.4;
-  padding: 0rem 0rem 1.5rem 1rem;
+  padding: 0rem 0rem 1.5rem;
 }
 
 .row {
@@ -372,7 +251,7 @@ header {
   padding: 0 1rem;
   font-size: 1.1rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  margin-bottom: 5rem;
   color: var(--gris-fosc);
 }
 
@@ -393,16 +272,17 @@ header {
 
 .audiencia-cards {
   display: flex;
-  width: 100vw;              
+  width: 100vw;
   margin: 0;
   padding: 0;
 }
 
 .audiencia-card {
-  flex: 1;                    
-  /*min-width: 0;      */   
+  flex: 1;
   display: flex;
   flex-direction: column;
+  border-radius: 14px 14px 0 0;
+  overflow: hidden;
 }
 
 .audiencia-header {
@@ -410,11 +290,9 @@ header {
   text-align: center;
   font-weight: bold;
   color: white;
-  border-top-left-radius: 1rem;
-  border-top-right-radius: 1rem;
+
 
 }
-
 .audiencia-image {
   background-size: cover;
   background-position: center;
@@ -427,9 +305,8 @@ header {
   position: absolute;
   bottom: 0;
   padding: 2rem 2rem;
-  text-align: left;  
+  text-align: left;
   color: white;
-  font-weight: bold;
   font-size: 1.5rem;
   background: linear-gradient(to top, rgba(0,0,0,0.6), transparent);
 }
@@ -439,17 +316,20 @@ header {
   align-items: flex-start;
   gap: 0.5rem;
   padding: 1rem;
-  font-size: 0.85rem;
+  font-size: 1rem;
   color: var(--gris-mitja);
   background: white;
-  border: 1px solid var(--gris-suau);  /* línea nueva */
+  border: 1px solid var(--gris-suau);
+}
 
+.audiencia-footer p{
+  padding: 1rem;
 }
 
 .audiencia-footer svg {
   flex-shrink: 0;
-  width: 2rem;
-  height: 2rem;
+  width: 3rem;
+  height: 3rem;
 }
 
 .color-1 { background-color: var(--buttons); }
@@ -483,7 +363,7 @@ header {
 .plan-column {
   background: white;
   border-radius: 10px;
-  padding: 2rem 1.5rem;
+  padding: 2rem;
   flex: 1 1 220px;
   max-width: 350px;
   height: 600px;
@@ -570,12 +450,13 @@ header {
 
 .free-description {
   background-color: var(--button-hover);
-  padding: 1rem;
+  padding: 2rem;
   border-radius: 8px;
   font-size: 0.8rem;
   color: var(--gris-fosc);
   margin-bottom: 1rem;
 }
+
 .plan-column.utils{
   padding-left: 2.5rem;
   background-color: var(--gris-suau);
@@ -702,6 +583,7 @@ header {
   display: flex;
   flex-direction: column;
   gap: 0.4rem;
+  padding: 1rem;
   
 }
 
@@ -720,26 +602,35 @@ header {
   margin: 0;
   text-align: left;
 }
+.how-it-works {
+  background-color: var(--gris-clar);
+}
+.how-it-works {
+  margin-bottom: 0;   /* o menos margen */
+  padding-bottom: 2rem; /* controlado */
+}
+    .solucions{
+      background-color:var(--gris-clar);
+    }
 
 .cta-text {
-    margin-up: 3rem;
+  margin-up: 3rem;
   max-width: 720px;
   margin: 0 auto 2rem auto;
   text-align: center;
 }
 
 .cta-text h3 {
-  font-size: 1.3rem;
+  font-size: 1.8rem;
   font-weight: bold;
   color: var(--gris-fosc);
   margin-bottom: 1rem;
-  margin-top:3rem;
 
 }
 
 .cta-text p {
   color: var(--gris-mitja);
-  font-size: 0.9rem;
+  font-size: 1rem;
   margin-bottom: 2rem;
 }
 
@@ -795,131 +686,6 @@ header {
   .desktop-only { display: none; }
   .mobile-only { display: block; }
 
-  header {
-    position: fixed ;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 2000;
-    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05); 
-  }
-
-    .menu-btn {
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      background-color: white; 
-      border: none;
-      padding: 0.5rem 0.8rem;
-      border-radius: 0.5rem;
-    }
-
-    .menu-btn .menu-icon {
-      display: inline-block;
-      stroke: black; 
-    }
-
-    /* Mostrar icono y ocultar texto */
-    .menu-btn .menu-icon {
-      display: inline-block;
-    }
-    
-
-    .menu-btn .menu-text,
-    .menu-btn .arrow-down {
-      display: none;
-    }
-
-  .menu-dropdown {
-      position: fixed;
-      top: var(--header-height, 80px);
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: #1ca9e0; /* Agora blau */
-      padding: 4rem 2rem;
-      display: none; /* oculto por defecto */
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      gap: 1.5rem;
-      z-index: 1500;
-      border-radius: 0;
-    }
-
-    .menu-dropdown a {
-      color: white;
-      font-size: 1.3rem;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    /* Botón visible y con fondo blanco */
-    .menu-btn {
-      background: white;
-      color: black;
-      border: none;
-      padding: 0.4rem 0.8rem;
-      border-radius: 1rem;
-      display: flex;
-      align-items: center;
-      gap: 0.4rem;
-      cursor: pointer;
-      z-index: 3000; /* sobre el menú */
-      position: relative;
-    }
-
-    /* Estado abierto: ocultar hamburguesa y flecha, mostrar cruz */
-    .menu-btn.open .menu-icon,
-    .menu-btn.open .arrow-down {
-      display: none;
-    }
-
-    .menu-btn.open::after {
-      content: "✖";
-      font-size: 1.5rem;
-      color: black;
-    }
-
-  .mobile-menu {
-    display: flex; /* o block si no quieres flexbox */
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-    .developed-by{
-      z-index: 3500;
-    }
-
-  .upload-btn {
-    display: block;
-    width: 100%;
-    background-color: var(--button-hover);
-    padding: 0.75rem 1rem;
-    text-align: center;
-    font-weight: bold;
-    box-sizing: border-box;
-  }
-
-    .profile-btn {
-      background-color: transparent;
-      justify-content: center;
-    }
-
-    
-  .menu-dropdown svg {
-    stroke: white !important; /* fuerza el color de la línea */
-    fill: none !important;    /* asegura que no hay relleno */
-  }
-
-  .developed-by span{
-    display: none;
-  }
-
-
-  .header-right .icon-btn{
-    display: none;
-  }
 
   .hero-buttons {
     display: flex;
@@ -1197,7 +963,7 @@ header {
       height: auto;
       justify-content: flex-start;
       margin: 0;
-      padding: 0;
+      padding-left: 1rem;
       font-size: 1.2rem;
     }
 
@@ -1212,12 +978,9 @@ header {
       font-size: 0.9rem;
     }
 
-    .solucions-section{
-      background-color:var(--gris-clar);
-    }
 
     .cta-text{
-      margin-top: 2rem;
+      padding-top: 12rem;
       margin-bottom: 3rem;
       
     }
@@ -1266,5 +1029,4 @@ header {
   }
 
 }
-
 
