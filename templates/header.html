@@ -10,7 +10,7 @@
         </a>
     </div>
     <div class="header-right">
-        <a href="https://agora-platform-d810af4ebf30.herokuapp.com/" target="_blank" rel="noopener noreferrer">
+        <a href="https://ai.transcridata.io/" target="_blank" rel="noopener noreferrer">
             <button class="icon-btn" aria-label="Upload">
                 <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M16 8L11 3L6 8" stroke="#333333" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
@@ -20,23 +20,21 @@
             </button>
         </a>
 
-        <div class="lang-switcher desktop-only" id="lang-desktop">
-          <button class="lang-btn" aria-haspopup="true" aria-expanded="false">
-            <img src="{{ url_for('static', filename='img/flag-' ~ (get_locale() or 'ca') ~ '.svg') }}" alt="Idioma actual" width="20" height="14">
-            <span class="arrow">▼</span>
-          </button>
-          <div class="lang-menu" role="menu">
-            <a href="#" data-lang="ca" role="menuitem">
-              <img src="{{ url_for('static', filename='img/flag-ca.svg') }}" alt="Català" width="20" height="14"> Català
-            </a>
-            <a href="#" data-lang="es" role="menuitem">
-              <img src="{{ url_for('static', filename='img/flag-es.svg') }}" alt="Español" width="20" height="14"> Español
-            </a>
-            <a href="#" data-lang="en" role="menuitem">
-              <img src="{{ url_for('static', filename='img/flag-en.svg') }}" alt="English" width="20" height="14"> English
-            </a>
-          </div>
-        </div>
+        {% set cur = (get_locale().language if get_locale() else 'ca') %}
+{% set cur3 = 'CAT' if cur=='ca' else ('ESP' if cur=='es' else 'ENG') %}
+
+<div class="lang-switcher desktop-only" id="lang-desktop">
+  <button class="lang-btn" type="button" aria-haspopup="true" aria-expanded="false">
+    <span class="lang-code">{{ cur3 }}</span>
+    <span class="arrow">▼</span>
+  </button>
+
+  <div class="lang-menu" role="menu" hidden>
+    <a href="#" data-lang="ca" role="menuitem"><span class="lang-code">CAT</span></a>
+    <a href="#" data-lang="es" role="menuitem"><span class="lang-code">ESP</span></a>
+    <a href="#" data-lang="en" role="menuitem"><span class="lang-code">ENG</span></a>
+  </div>
+</div>
 
         <!-- Botón menú -->
         <button class="menu-btn" id="menu-toggle">
@@ -57,18 +55,18 @@
 
         <!-- Menú Desktop -->
         <div class="menu-dropdown desktop-menu" id="desktop-menu">
-            <a href="#">{{ _("Utilitats de la plataforma") }}</a>
-            <a href="#">{{ _("Exemples d’ús") }}</a>
-            <a href="#">{{ _("Plans free i premium") }}</a>
-            <a href="#">{{ _("Funcionament i contacte") }}</a>
+            <a href="#utilitats">{{ _("Utilitats de la plataforma") }}</a>
+            <a href="#exemples">{{ _("Exemples d’ús") }}</a>
+            <a href="#plans">{{ _("Plans free i premium") }}</a>
+            <a href="#funcionament">{{ _("Funcionament i contacte") }}</a>
         </div>
 
         <!-- Menú Móvil -->
         <div class="menu-dropdown mobile-menu" id="mobile-menu">
-            <a href="#">{{ _("Utilitats de la plataforma") }}</a>
-            <a href="#">{{ _("Exemples d’ús") }}</a>
-            <a href="#">{{ _("Plans free i premium") }}</a>
-            <a href="#">{{ _("Funcionament i contacte") }}</a>
+            <a href="#utilitats">{{ _("Utilitats de la plataforma") }}</a>
+            <a href="#exemples">{{ _("Exemples d’ús") }}</a>
+            <a href="#plans">{{ _("Plans free i premium") }}</a>
+            <a href="#funcionament">{{ _("Funcionament i contacte") }}</a>
 
             <a href="#" id="mobile-upload-btn" class="upload-btn">
                 <svg width="22" height="24" viewBox="0 0 22 24" fill="none" xmlns="http://www.w3.org/2000/svg">

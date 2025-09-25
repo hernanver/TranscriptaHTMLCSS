@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ca">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TranscriData</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 
     <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='img/favicon-16x16.png') }}">
@@ -19,10 +20,12 @@
         <div class="hero-content">
             <h1>{{ _("L’única plataforma de transcripció dissenyada per a documents reals") }}</h1>
             <p class="subtitle">
-                {{ _("Converteix imatges tipogràfiques en text editable, classificat i exportable, sense necessitat de saber usar intel·ligència artificial. Transcriu, classifica i transforma imatges tipogràfiques en dades útils amb la màxima confiança i sense coneixements tècnics.") }}
+                {{ _("Converteix imatges tipogràfiques en text editable, classificat i exportable, sense necessitat de saber utilitzar la intel·ligència artificial. Transcriu, classifica i transforma imatges tipogràfiques en dades útils amb la màxima confiança i sense coneixements tècnics.") }}
             </p>
             <div class="hero-buttons">
-                <button class="btn-primary">{{ _("TRANSCRIU GRATIS") }}</button>
+                <a href="https://ai.transcridata.io/" class="btn-primary">
+                    {{ _("TRANSCRIU GRATIS") }}
+                </a>
                 <a href="{{ url_for_lang('contacto') }}" class="btn-secondary">
                     {{ _("DEMO PERSONALITZADA") }}
                 </a>
@@ -32,15 +35,15 @@
 
     <section class="descobreix-section">
         <p>{{ _("Oblida’t de copiar i enganxar o d’escriure instruccions a ChatGPT. Nosaltres ens encarreguem de tot.") }}</p>
-        <h2>{{ _("DESCOBREIX LES SEVES UTILITATS") }}</h2>
+        <h2>{{ _("DESCOBREIX LES UTILITATS DE LA PLATAFORMA") }}</h2>
         <div class="arrow">▼</div>
     </section>
 
-    <section class="generica-section">
+    <section class="generica-section" >
+        <span id="utilitats" aria-hidden="true"></span>
         <p class="desktop-only">{{ _("La nostra IA no és genèrica: ha après a llegir padrons, expedients, actes i documents antics, com ho faria un lector humà expert") }}</p>
-        <p class="mobile-only">{{ _("Cada dada està vinculada amb el seu origen visual. Tu tens el control total sobre què entra a la teva base de dades.") }}</p>
+        <p class="mobile-only">{{ _("Cada dada està vinculada al seu origen visual. Tu tens el control total sobre què entra a la teva base de dades.") }}</p>
     </section>
-    
 
 <section class="features">
     <div class="row row-top">
@@ -63,7 +66,7 @@
             </svg>
         </div>
         <div class="feature-text">
-            <h3>{{ _("Sensen Prompts") }}</h3>
+            <h3>{{ _("Sense prompts") }}</h3>
             <p>
             {{ _("No cal escriure instruccions ni copiar i enganxar. Nosaltres ens encarreguem de tot: estructura, format, correcció i utilitat real.") }}
         </p></div>
@@ -80,9 +83,9 @@
             </svg>
         </div>
         <div class="feature-text">
-            <h3>{{ _("Conserva l’Origen Visual") }}</h3>
+            <h3>{{ _("Conserva l’origen visual") }}</h3>
             <p>
-            {{ _("Cada dada està vinculada amb el seu origen visual. Tu tens el control total sobre què entra a la teva base de dades.") }}
+            {{ _("Cada dada està vinculada al seu origen visual. Tu tens el control total sobre què entra a la teva base de dades.") }}
         </p></div>
     </div>
     </div>
@@ -95,7 +98,7 @@
             </svg>
         </div>
         <div class="feature-text">
-            <h3>{{ _("Detecta Informació Rellevant") }}</h3>
+            <h3>{{ _("Detecta informació rellevant") }}</h3>
             <p>{{ _("Identifica automàticament persones, dates i relacions clau sense necessitat de configurar res") }}
         </p></div>
     </div>
@@ -111,7 +114,7 @@
         <div class="feature-text">
         <h3>{{ _("Gestió completa d’arxius") }}</h3>
         <p>
-        {{ _("Organitza, etiqueta i cerca fàcilment entre lots de documents. Tot connectat entre dades, imatge i text") }}
+        {{ _("Organitza, etiqueta i cerca fàcilment entre lots de documents. Tot connectat entre les dades, la imatge i el text") }}
         </p></div>
     </div>
     </div>
@@ -126,6 +129,7 @@
     </section>
 
     <section class="audiencias">
+        <span id="exemples" aria-hidden="true"></span>
         <h2>
             {{ _("La nostra plataforma està pensada<br>per a qui necessita processar documents reals,<br>no només jugar amb la IA.") }}
         </h2>
@@ -136,13 +140,13 @@
                 <div class="audiencia-header color-1">{{ _("ARXIUS MUNICIPALS") }}</div>
                 <div class="audiencia-image" style="background-image: url('{{ url_for('static', filename='img/municipals.png') }}');">
                     <div class="audiencia-overlay">
-                        {{ _("Digitalitza padrons i censos, classificats per camp i precisió verificable") }}
+                        {{ _("Digitalitza padrons i censos, classificats per camps i amb precisió verificable.") }}
                     </div>
                 </div>
                 <div class="audiencia-mobile-text mobile-only">
                     <h3>{{ _("ARXIUS MUNICIPALS") }}</h3>
                     <p>
-                        {{ _("Digitalitza padrons i censos antics amb classificació automàtica i precisió verificable, pensat per a arxius i administracions locals.") }}
+                        {{ _("Digitalitza padrons i censos classificats per camps i amb precisió verificable, pensada per a arxius i administracions locals.") }}
                     </p>
                 </div>
             </div>
@@ -241,7 +245,7 @@
 
             <div class="audiencia-card color-5">
             <div class="audiencia-card-first color-5">
-                <div class="audiencia-header color-5">{{ _("ENTITATS MEMÒRIA HISTÒRICA") }}</div>
+                <div class="audiencia-header color-5">{{ _("ENTITATS DE MEMÒRIA HISTÒRICA") }}</div>
                 <div class="audiencia-image" style="background-image: url('{{ url_for('static', filename='img/memoria.png') }}');">
                     <div class="audiencia-overlay">
                     {{ _("Preserva el patrimoni documental amb precisió i sense barreres tècniques.") }}
@@ -271,7 +275,7 @@
     </section>
 
 
-
+    <span id="plans" aria-hidden="true"></span>
     <section class="plans">
     <h2>{{ _("Plans i tarifes") }}</h2>
     <div class="plans-container">
@@ -281,15 +285,15 @@
         <h3>{{ _("QUÈ INCLOU LA PROVA GRATUÏTA?") }}</h3>
         <div class="free-description">
             <p>
-            {{ _("Fes la teva primera transcripció gratis i sent el què és tenir el control.<br>Descobreix el poder d’una IA entrenada per entendre els teus documents.<br><br>No necessites saber usar IA, OCR ni programació.") }}
+            {{ _("Fes la teva primera transcripció gratis i comprova què és tenir el control.<br>Descobreix el poder d’una IA entrenada per entendre els teus documents.<br><br>No necessites saber utilitzar IA, OCR ni programació.") }}
             </p>
         </div>
         <ul class="check-list">
-            <li>{{ _("Processar 2 imatges tipogràfiques reals") }}</li>
+            <li>{{ _("Processa 2 imatges tipogràfiques reals") }}</li>
             <li>{{ _("Vista prèvia del text alineat amb la imatge original") }}</li>
-            <li>{{ _("Descarregar un exemple amb sortida estructurada en Excel") }}</li>
+            <li>{{ _("Descarrega un exemple amb sortida estructurada en Excel") }}</li>
             <li>{{ _("Accés complet al panell amb funcions avançades visibles") }}</li>
-            <li>{{ _("Usar una IA que sap què fas, sense instruir ni explicar res") }}</li>
+            <li>{{ _("Utilitza una IA que sap què fas, sense instruir ni explicar res") }}</li>
             <li>{{ _("Sense targeta, sense compromís") }}</li>
         </ul>
         </div>
@@ -338,9 +342,9 @@
             <li>{{ _("Treballar amb dades en eines conegudes") }}</li>
             <li>{{ _("Extreure i unificar noms, dates, llocs, professors, etc.") }}</li>
             <li>{{ _("Obté resultats nets fins i tot de digitalitzats difícils") }}</li>
-            <li>{{ _("Centenars de documents de cop, sense teclejar manual") }}</li>
-            <li>{{ _("Ideal per a arxius i investigadors. Manté l’arxiu digital ordenat i accessible") }}</li>
-            <li>{{ _("Transcriu i adapta el flux a les teves necessitats. Resolt dubtes reals amb persones, no formularis.") }}</li>
+            <li>{{ _("Centenars de documents de cop, sense teclejar manualment") }}</li>
+            <li>{{ _("Ideal per a arxius i investigadors. Mantén l’arxiu digital ordenat i accessible") }}</li>
+            <li>{{ _("Transcriu i adapta el flux a les teves necessitats. Resol dubtes reals amb persones, no formularis.") }}</li>
             <li>{{ _("Revisa el que has fet i no perdràs res") }}</li>
         </ul>
         </div>
@@ -348,6 +352,7 @@
     </div>
     </section>
 
+    <span id="funcionament" aria-hidden="true"></span>
     <section class="how-it-works">
     <h2>{{ _("Així funciona la nostra plataforma") }}</h2>
 
@@ -372,7 +377,7 @@
             <div class="step-content-text">
                 <h3>{{ _("Puja la teva imatge o document") }}</h3>
                 <p>
-                {{ _("Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. L’arrossegues, el puges i llest. No cal netejar la imatge ni saber si és OCR-friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs") }}
+                {{ _("Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. L’arrossegues, el puges i ja està. No cal netejar la imatge ni saber si és apta per a l’OCR. La nostra IA s’adapta. Admet JPG, PNG i PDF") }}
                 </p>
                 </div>
             </div>
@@ -400,13 +405,13 @@
     </div>
 
     <div class="cta-buttons">
-        <a href="#" class="btn btn-demo">
+        <a href="https://ai.transcridata.io/" class="btn btn-demo">
             <svg width="28" height="17" viewBox="0 0 28 17" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M26.907 6.13859H25.8916V1.66871C25.8916 0.830394 25.2118 0.150635 24.3735 0.150635H3.62651C2.78819 0.150635 2.10843 0.830394 2.10843 1.66871V6.13859H1.09301C0.489153 6.13859 0 6.62774 0 7.2316V12.1299C0 12.7338 0.489153 13.2229 1.09301 13.2229H2.10843V15.3314C2.10843 16.1697 2.78819 16.8494 3.62651 16.8494H24.3735C25.2118 16.8494 25.8916 16.1697 25.8916 15.3314V13.2229H26.907C27.5108 13.2229 28 12.7338 28 12.1299V7.2316C28 6.62774 27.5108 6.13859 26.907 6.13859ZM24.9639 14.9097C24.9639 15.468 24.5101 15.9217 23.9518 15.9217H4.04819C3.48988 15.9217 3.03614 15.468 3.03614 14.9097V2.09039C3.03614 1.53208 3.48988 1.07835 4.04819 1.07835H23.9518C24.5101 1.07835 24.9639 1.53208 24.9639 2.09039V14.9097Z" fill="white"/>
                 <path d="M23.277 2.25903H17.4324C17.2132 2.25903 17.0361 2.43614 17.0361 2.65541C17.0361 3.64722 16.2315 4.4518 15.2397 4.4518H12.0871C11.0953 4.4518 10.2908 3.64722 10.2908 2.65541C10.2908 2.43614 10.1137 2.25903 9.89438 2.25903H4.7245C4.35173 2.25903 4.0498 2.56096 4.0498 2.93373V14.0663C4.0498 14.439 4.35173 14.741 4.7245 14.741H23.2787C23.6515 14.741 23.9534 14.439 23.9534 14.0663V2.93373C23.9534 2.56096 23.6515 2.25903 23.2787 2.25903H23.277ZM7.42161 8.5C6.3033 8.5 5.39751 7.59421 5.39751 6.4759C5.39751 5.35759 6.3033 4.4518 7.42161 4.4518C8.53992 4.4518 9.44571 5.35759 9.44571 6.4759C9.44571 7.59421 8.53992 8.5 7.42161 8.5ZM18.3197 12.5364C17.8137 12.9429 15.9481 13.5214 13.752 13.54C13.7368 13.54 13.7233 13.54 13.7081 13.54C13.6929 13.54 13.6794 13.54 13.6643 13.54C11.4681 13.5198 9.60257 12.9412 9.09655 12.5347C8.69173 12.0793 9.14041 11.3084 9.71053 11.5243C10.2638 11.7335 11.7819 12.2496 13.7064 12.28C15.631 12.2496 17.1491 11.7352 17.7023 11.5243C18.2725 11.3084 18.7211 12.0793 18.3163 12.5347L18.3197 12.5364ZM20.2409 8.5C19.1226 8.5 18.2168 7.59421 18.2168 6.4759C18.2168 5.35759 19.1226 4.4518 20.2409 4.4518C21.3592 4.4518 22.265 5.35759 22.265 6.4759C22.265 7.59421 21.3592 8.5 20.2409 8.5Z" fill="white"/>
             </svg>
-            <span class="desktop-only">{{ _("SOL·LICITA UNA DEMO GRATUITA") }}</span>
-            <span class="mobile-only">{{ _("DEMO GRATUITA") }}</span>
+            <span class="desktop-only">{{ _("PROVA LA PLATAFORMA GRATIS") }}</span>
+            <span class="mobile-only">{{ _("PROVA GRATUITA") }}</span>
         </a>
         <a href="{{ url_for_lang('contacto') }}" class="btn btn-contacte">{{ _("CONTACTE DIRECTE") }}</a>
     </div>
@@ -414,6 +419,7 @@
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
     <script src="{{ url_for('static', filename='js/telefono.js') }}"></script>
     <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+  {% include 'footer.html' %}
 
 
 </body>

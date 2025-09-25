@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ _("Contacte") }}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/header.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/footer.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/contacto.css') }}">
 
 </head>
@@ -44,9 +45,9 @@
                 <div class="form-group">
                   <label for="idioma">{{ _("Idioma de resposta") }}</label>
                   <select id="idioma" name="idioma">
-                    <option value="ca">Català</option>
-                    <option value="es">Español</option>
-                    <option value="en">English</option>
+                    <option value="ca">{{ _("Català") }}</option>
+                    <option value="es">{{ _("Español") }}</option>
+                    <option value="en">{{ _("English") }}</option>
                   </select>
                 </div>
               </div>
@@ -70,5 +71,7 @@
     </div>
 
     <script src="{{ url_for('static', filename='js/home.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/header.js') }}"></script>
+  {% include 'footer.html' %}
 </body>
 </html>

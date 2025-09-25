@@ -140,25 +140,30 @@ header {
 .arrow-down {
   font-size: 0.8rem;
 }
-.lang-switcher { position: relative; margin-right: .75rem; }
-.lang-btn {
-  display: inline-flex; align-items: center; gap: .4rem;
-  padding: .4rem .6rem; border: 1px solid #e5e7eb; border-radius: 999px;
-  background: #fff; cursor: pointer;
+.lang-switcher{ position:relative; margin-right:.75rem; }
+.lang-btn{
+  display:inline-flex; align-items:center; gap:.4rem;
+  padding:.4rem .6rem; border:1px solid white; border-radius:4px;
+  background:#fff; cursor:pointer;
 }
-.lang-btn .arrow { font-size: .75rem; opacity: .7; }
-.lang-menu {
-  position: absolute; right: 0; top: calc(100% + .4rem);
-  background: #fff; border: 1px solid #e5e7eb; border-radius: .5rem;
-  box-shadow: 0 6px 20px rgba(0,0,0,.08);
-  padding: .4rem; min-width: 160px; display: none; z-index: 50;
+.lang-btn .arrow{ font-size:.75rem; opacity:.7; }
+.lang-menu{
+  position:absolute; right:0; top:calc(100% + .4rem);
+  background:#fff; border:1px solid #e5e7eb; border-radius:.5rem;
+  box-shadow:0 6px 20px rgba(0,0,0,.08);
+  padding:.4rem; min-width:160px; display:none; z-index:1050;
 }
-.lang-menu a {
-  display: flex; align-items: center; gap: .5rem;
-  padding: .5rem .6rem; border-radius: .4rem; text-decoration: none; color: #111;
+.lang-menu a{
+  display:flex; align-items:center; gap:.5rem;
+  padding:.5rem .6rem; border-radius:.4rem;
+  text-decoration:none; color:#111;
 }
-.lang-menu a:hover { background: #f3f4f6; }
-.desktop-only { display: none; }
+.lang-menu a:hover{ background:#f3f4f6; }
+
+/* Oculto por defecto */
+#lang-desktop .lang-menu { display: none; }
+/* Visible cuando el contenedor tiene la clase open */
+#lang-desktop.open .lang-menu { display: block; }
 
 
 @media (max-width: 768px) {

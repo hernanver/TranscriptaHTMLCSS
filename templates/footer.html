@@ -1,0 +1,42 @@
+<footer class="site-footer mt-auto">
+  <div class="footer-inner" role="contentinfo" aria-label="{{ _('Finançament NextGenerationEU') }}">
+    <div class="footer-logos" role="contentinfo">
+
+      {# PRTR: ES/EN → logo en castellano; CA → logo en català #}
+      {% if get_locale() and get_locale().language in ['es','en'] %}
+        <img
+          src="{{ url_for('static', filename='img/Logo-PRTR-ES-trim.png') }}"
+          alt="{{ _('Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya') }}"
+          class="logo prtr" height="56" loading="lazy">
+      {% else %}
+        <img
+          src="{{ url_for('static', filename='img/PRTR_Catala-01-trim.png') }}"
+          alt="{{ _('Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya') }}"
+          class="logo prtr" height="56" loading="lazy">
+      {% endif %}
+
+      {# UE: EN → logo EN; CA/ES → logo ES #}
+      {% if get_locale() and get_locale().language == 'en' %}
+        <img
+          src="{{ url_for('static', filename='img/EN_FundedbytheEU_RGB_POS.png') }}"
+          alt="{{ _('Finançat per la Unió Europea – NextGenerationEU') }}"
+          class="logo eu" height="56" loading="lazy">
+      {% else %}
+        <img
+          src="{{ url_for('static', filename='img/ES_FundedbytheEU_RGB_POS.png') }}"
+          alt="{{ _('Finançat per la Unió Europea – NextGenerationEU') }}"
+          class="logo eu" height="56" loading="lazy">
+      {% endif %}
+
+      <img
+        src="{{ url_for('static', filename='img/sctreball_h3.png') }}"
+        alt="{{ _('Generalitat de Catalunya - Secretaria de Treball') }}"
+        class="logo cat" height="56" loading="lazy">
+    </div>
+
+    <p class="funding-note">
+      {{ _('Aquest projecte està finançat per la Unió Europea – NextGenerationEU.') }}<br>
+      {{ _('Amb el suport de la Generalitat de Catalunya.') }}
+    </p>
+  </div>
+</footer>
