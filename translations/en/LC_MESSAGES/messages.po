@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-09-24 12:27+0200\n"
+"POT-Creation-Date: 2025-10-07 13:36+0200\n"
 "PO-Revision-Date: 2025-08-05 16:40+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -133,8 +133,8 @@ msgid ""
 "artificial. Transcriu, classifica i transforma imatges tipogràfiques en "
 "dades útils amb la màxima confiança i sense coneixements tècnics."
 msgstr ""
-"Convert typographic images into editable, classified, and exportable text "
-"without needing to know how to use artificial intelligence. Transcribe, "
+"Convert typographic images into editable, classified, and exportable text"
+" without needing to know how to use artificial intelligence. Transcribe, "
 "classify, and transform typographic images into useful data with maximum "
 "reliability and no technical knowledge required."
 
@@ -163,8 +163,8 @@ msgid ""
 "La nostra IA no és genèrica: ha après a llegir padrons, expedients, actes"
 " i documents antics, com ho faria un lector humà expert"
 msgstr ""
-"Our AI is not generic: it has learned to read census records, case files, "
-"minutes, and old documents just like an expert human reader would."
+"Our AI is not generic: it has learned to read census records, case files,"
+" minutes, and old documents just like an expert human reader would."
 
 #: templates/index.html:45 templates/index.html:88
 msgid ""
@@ -211,8 +211,8 @@ msgid ""
 "Identifica automàticament persones, dates i relacions clau sense "
 "necessitat de configurar res"
 msgstr ""
-"Automatically identifies people, dates, and key relationships without any "
-"configuration needed."
+"Automatically identifies people, dates, and key relationships without any"
+" configuration needed."
 
 #: templates/index.html:115
 msgid "Gestió completa d’arxius"
@@ -223,8 +223,8 @@ msgid ""
 "Organitza, etiqueta i cerca fàcilment entre lots de documents. Tot "
 "connectat entre les dades, la imatge i el text"
 msgstr ""
-"Organize, tag, and easily search through batches of documents. Everything "
-"is connected between the data, the image, and the text."
+"Organize, tag, and easily search through batches of documents. Everything"
+" is connected between the data, the image, and the text."
 
 #: templates/index.html:126
 msgid ""
@@ -233,10 +233,10 @@ msgid ""
 "escriure instruccions ni copiar i enganxar.<br>Nosaltres ens encarreguem "
 "de tot: estructura, format, correcció i utilitat real."
 msgstr ""
-"Every piece of data you see is linked to its visual source. You have full "
-"control over what enters your database.<br><br>No need to write "
-"instructions or copy and paste.<br>We take care of everything: structure, "
-"format, correction, and real usability."
+"Every piece of data you see is linked to its visual source. You have full"
+" control over what enters your database.<br><br>No need to write "
+"instructions or copy and paste.<br>We take care of everything: structure,"
+" format, correction, and real usability."
 
 #: templates/index.html:134
 msgid ""
@@ -316,7 +316,9 @@ msgstr "HISTORICAL MEMORY ENTITIES"
 
 #: templates/index.html:251 templates/index.html:257
 msgid "Preserva el patrimoni documental amb precisió i sense barreres tècniques."
-msgstr "Preserve documentary heritage with precision and without technical barriers."
+msgstr ""
+"Preserve documentary heritage with precision and without technical "
+"barriers."
 
 #: templates/index.html:255
 msgid "ENTITATS MEMÒRIA HISTÒRICA"
@@ -362,7 +364,9 @@ msgstr "Full access to the panel with visible advanced features"
 
 #: templates/index.html:296
 msgid "Utilitza una IA que sap què fas, sense instruir ni explicar res"
-msgstr "Use an AI that understands what you do without instructions or explanations"
+msgstr ""
+"Use an AI that understands what you do without instructions or "
+"explanations"
 
 #: templates/index.html:297
 msgid "Sense targeta, sense compromís"
@@ -372,109 +376,135 @@ msgstr "No card required, no commitment"
 msgid "GRATUÏT"
 msgstr "FREE"
 
-#: templates/index.html:305 templates/index.html:318
+#: templates/index.html:305 templates/index.html:330
 msgid "al mes"
 msgstr "per month"
 
-#: templates/index.html:307 templates/index.html:320
+#: templates/index.html:307 templates/index.html:332
 msgid "Crear compte"
 msgstr "Create account"
 
-#: templates/index.html:310 templates/index.html:323
-msgid "Transcripció bàsica"
-msgstr "Basic transcription"
+#: templates/index.html:310
+msgid "20 crèdits al mes"
+msgstr "20 tokens per month"
 
-#: templates/index.html:316
+#: templates/index.html:311
+msgid "Descàrrega de transcripcions <br> en txt"
+msgstr "Download transcripts <br> in txt"
+
+#: templates/index.html:312
+msgid "20 descàrregues al mes"
+msgstr "20 downloads per month"
+
+#: templates/index.html:313
+msgid "Model de IA básic"
+msgstr "Basic AI model"
+
+#: templates/index.html:314
+msgid "Ideal per castellá, catalá i anglés"
+msgstr "Ideal for Spanish, Catalan and English"
+
+#: templates/index.html:317 templates/index.html:342
+msgid "Edició manual en linea"
+msgstr "Online manual editing"
+
+#: templates/index.html:320 templates/index.html:343
+msgid "Transcripció de manuscrits"
+msgstr "Handwritten text transcription"
+
+#: templates/index.html:321 templates/index.html:344
+msgid "Correu d'avís al acabar una transcripció"
+msgstr "Email notification when transcription is completed"
+
+#: templates/index.html:322 templates/index.html:345
+msgid "Suport tècnic prioritari"
+msgstr "Priority technical support"
+
+#: templates/index.html:328
 msgid "PRO"
 msgstr "PRO"
 
-#: templates/index.html:324
-msgid "Exportació a Excel/CSV"
-msgstr "Export to Excel/CSV"
-
-#: templates/index.html:325
-msgid "Classificació automàtica per camps"
-msgstr "Automatic classification by fields"
-
-#: templates/index.html:326
-msgid "Correcció d’errors d’OCR"
-msgstr "OCR error correction"
-
-#: templates/index.html:327
-msgid "Pujada per lots"
-msgstr "Batch upload"
-
-#: templates/index.html:328
-msgid "Organització i etiquetatge de documents"
-msgstr "Document organization and labeling"
-
-#: templates/index.html:329
-msgid "Suport prioritari"
-msgstr "Priority support"
-
-#: templates/index.html:330
-msgid "Historial i recuperació"
-msgstr "History and recovery"
+#: templates/index.html:335
+msgid "500 crèdits al mes"
+msgstr "500 credits per month"
 
 #: templates/index.html:336
+msgid "Descàrrega de transcripcions <br> en txt, pdf i docx"
+msgstr "Download transcripts <br> in txt, pdf and docx"
+
+#: templates/index.html:337
+msgid "100 descàrregues al mes"
+msgstr "100 downloads per month"
+
+#: templates/index.html:338
+msgid "Model de IA avançat"
+msgstr "Advanced AI model"
+
+#: templates/index.html:339
+msgid "Ideal per múltiples idiomes"
+msgstr "Ideal for multiple languages"
+
+#: templates/index.html:351
 msgid "UTILITATS"
 msgstr "UTILITIES"
 
-#: templates/index.html:337
+#: templates/index.html:352
 msgid "Descobreix tot el que pots fer amb aquesta eina"
 msgstr "Discover everything you can do with this tool"
 
-#: templates/index.html:341
+#: templates/index.html:356
 msgid "Convertir imatges en text sense esforç"
 msgstr "Convert images to text effortlessly"
 
-#: templates/index.html:342
+#: templates/index.html:357
 msgid "Treballar amb dades en eines conegudes"
 msgstr "Work with data in familiar tools"
 
-#: templates/index.html:343
+#: templates/index.html:358
 msgid "Extreure i unificar noms, dates, llocs, professors, etc."
 msgstr "Extract and unify names, dates, places, teachers, etc."
 
-#: templates/index.html:344
+#: templates/index.html:359
 msgid "Obté resultats nets fins i tot de digitalitzats difícils"
 msgstr "Get clean results even from difficult scans"
 
-#: templates/index.html:345
+#: templates/index.html:360
 msgid "Centenars de documents de cop, sense teclejar manualment"
 msgstr "Hundreds of documents at once, without manual typing"
 
-#: templates/index.html:346
+#: templates/index.html:361
 msgid ""
 "Ideal per a arxius i investigadors. Mantén l’arxiu digital ordenat i "
 "accessible"
 msgstr ""
-"Ideal for archives and researchers. Keep the digital archive organized and accessible"
+"Ideal for archives and researchers. Keep the digital archive organized "
+"and accessible"
 
-#: templates/index.html:347
+#: templates/index.html:362
 msgid ""
 "Transcriu i adapta el flux a les teves necessitats. Resol dubtes reals "
 "amb persones, no formularis."
 msgstr ""
-"Transcribe and adapt the workflow to your needs. Solve real questions with people, not forms."
+"Transcribe and adapt the workflow to your needs. Solve real questions "
+"with people, not forms."
 
-#: templates/index.html:348
+#: templates/index.html:363
 msgid "Revisa el que has fet i no perdràs res"
 msgstr "Review what you've done and you won't lose anything"
 
-#: templates/index.html:357
+#: templates/index.html:372
 msgid "Així funciona la nostra plataforma"
 msgstr "How our platform works"
 
-#: templates/index.html:363 templates/index.html:376 templates/index.html:389
+#: templates/index.html:378 templates/index.html:391 templates/index.html:404
 msgid "PAS 1"
 msgstr "STEP 1"
 
-#: templates/index.html:365 templates/index.html:378 templates/index.html:391
+#: templates/index.html:380 templates/index.html:393 templates/index.html:406
 msgid "Puja la teva imatge o document"
 msgstr "Upload your image or document"
 
-#: templates/index.html:367 templates/index.html:393
+#: templates/index.html:382 templates/index.html:408
 msgid ""
 "Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. "
 "L’arrossegues, el puges i llest. No cal netejar la imatge ni saber si és "
@@ -484,17 +514,17 @@ msgstr ""
 "upload it, and you’re done. No need to clean the image or know if it’s "
 "OCR-friendly. Our AI adapts. Accepts JPG, PNG, and PDFs."
 
-#: templates/index.html:380
+#: templates/index.html:395
 msgid ""
 "Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. "
 "L’arrossegues, el puges i ja està. No cal netejar la imatge ni saber si "
 "és apta per a l’OCR. La nostra IA s’adapta. Admet JPG, PNG i PDF"
 msgstr ""
 "Accepts old images, a photo from your phone, or a scanned PDF. Drag it, "
-"upload it, and that’s it. No need to clean the image or know if it’s OCR-compatible. "
-"Our AI adapts. Accepts JPG, PNG, and PDF."
+"upload it, and that’s it. No need to clean the image or know if it’s OCR-"
+"compatible. Our AI adapts. Accepts JPG, PNG, and PDF."
 
-#: templates/index.html:403
+#: templates/index.html:418
 msgid ""
 "Tens molts documents per digitalitzar o necessites adaptar el flux a la "
 "teva organització?"
@@ -502,19 +532,39 @@ msgstr ""
 "Do you have many documents to digitize or need to adapt the workflow to "
 "your organization?"
 
-#: templates/index.html:404
+#: templates/index.html:419
 msgid "Oferim solucions a mida per a arxius, investigadors i administracions."
 msgstr ""
-"We offer tailored solutions for archives, researchers, and administrations."
+"We offer tailored solutions for archives, researchers, and "
+"administrations."
 
-#: templates/index.html:413
+#: templates/index.html:428
 msgid "PROVA LA PLATAFORMA GRATIS"
 msgstr "TRY THE PLATFORM FOR FREE"
 
-#: templates/index.html:414
+#: templates/index.html:429
 msgid "PROVA GRATUITA"
 msgstr "FREE TRIAL"
 
-#: templates/index.html:416
+#: templates/index.html:431
 msgid "CONTACTE DIRECTE"
 msgstr "DIRECT CONTACT"
+
+#~ msgid "Exportació a Excel/CSV"
+#~ msgstr "Export to Excel/CSV"
+
+#~ msgid "Classificació automàtica per camps"
+#~ msgstr "Automatic classification by fields"
+
+#~ msgid "Correcció d’errors d’OCR"
+#~ msgstr "OCR error correction"
+
+#~ msgid "Pujada per lots"
+#~ msgstr "Batch upload"
+
+#~ msgid "Organització i etiquetatge de documents"
+#~ msgstr "Document organization and labeling"
+
+#~ msgid "Historial i recuperació"
+#~ msgstr "History and recovery"
+
