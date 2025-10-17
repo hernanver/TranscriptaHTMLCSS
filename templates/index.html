@@ -295,54 +295,55 @@
             <li>{{ _("Accés complet al panell amb funcions avançades visibles") }}</li>
             <li>{{ _("Utilitza una IA que sap què fas, sense instruir ni explicar res") }}</li>
             <li>{{ _("Sense targeta, sense compromís") }}</li>
+            <li>{{ _("10 crèdits al mes") }}</li>
         </ul>
         </div>
 
         <!-- Columna 2: Gratuït -->
         <div class="plan-column free">
-        <h3>{{ _("GRATUÏT") }}</h3>
+        <h3>{{ _("FREE") }}</h3>
         <p class="price">
             0€ <span class="price-period">{{ _("al mes") }}</span>
         </p>
         <a href="https://ai.transcridata.io/accounts/signup/">{{ _("Crear compte") }}</a>
         <div class="separator"></div>
         <ul class="check-list">
-            <li>{{ _("20 crèdits al mes") }}</li>
-            <li>{{ _("Descàrrega de transcripcions <br> en txt") }}</li>
-            <li>{{ _("20 descàrregues al mes") }}</li>
-            <li>{{ _("Model de IA básic") }}</li>
-            <li>{{ _("Ideal per castellá, catalá i anglés") }}</li>
-        </ul>
-        <ul class="check-list">
-            <li>{{ _("Edició manual en linea") }}</li>
-        </ul>
-        <ul class="cross-list">
-            <li>{{ _("Transcripció de manuscrits") }}</li>
-            <li>{{ _("Correu d'avís al acabar una transcripció") }}</li>
-            <li>{{ _("Suport tècnic prioritari") }}</li>
+            <li>{{ _("Descàrrega de transcripcions <br> en <strong>txt</strong>") }}</li>
+            <li>{{ _("<strong>Càrrega documents 1 per 1</strong> (lots petits), sense ZIP, lots ni coles prioritzades.") }}</li>
+            <li>{{ _("<strong>Edició manual</strong>/validació bàsica") }}</li>
+            <li>{{ _("<strong>Historial</strong> dels darrers <strong>7 dies</strong>") }}</li>
+            <li>{{ _("Retenció <strong>7 dies</strong>") }}</li>
+            <li>{{ _("<strong>1 usuari</strong>") }}</li>
+            <li>{{ _("<strong>Sense</strong> integracions") }}</li>
+            <li>{{ _("<strong>Suport amb email estàndard</strong>") }}</li>
+            <li>{{ _("Model de IA <strong>bàsic</strong>") }}</li>
+            <li>{{ _("<strong>Castellà, català i anglès</strong>") }}</li>
+            <li>{{ _("No transcripció de manuscrits, <strong>només documents tipogràfics</strong>") }}</li>
         </ul>
         </div>
 
         <!-- Columna 3: Pro -->
         <div class="plan-column pro">
-        <h3>{{ _("PRO") }}</h3>
+        <h3>{{ _("PREMIUM") }}</h3>
         <p class="price">
-            X€ <span class="price-period">{{ _("al mes") }}</span>
+            29€ <span class="price-period">{{ _("al mes") }}</span>
         </p>
         <a href="https://ai.transcridata.io/accounts/signup/">{{ _("Crear compte") }}</a>
         <div class="separator"></div>
         <ul class="check-list">
-            <li>{{ _("500 crèdits al mes") }}</li>
-            <li>{{ _("Descàrrega de transcripcions <br> en txt, pdf i docx") }}</li>
-            <li>{{ _("100 descàrregues al mes") }}</li>
-            <li>{{ _("Model de IA avançat") }}</li>
-            <li>{{ _("Ideal per múltiples idiomes") }}</li>
-        </ul>
-        <ul class="check-list">
-            <li>{{ _("Edició manual en linea") }}</li>
-            <li>{{ _("Transcripció de manuscrits") }}</li>
-            <li>{{ _("Correu d'avís al acabar una transcripció") }}</li>
-            <li>{{ _("Suport tècnic prioritari") }}</li>
+            <li>{{ _("Descàrrega de transcripcions en <strong>TXT, DOCX o PDF</strong>") }}</li>
+            <li>{{ _("<strong>Càrrega massiva</strong> documents per lots, carpetes ZIP, o coles prioritzades") }}</li>
+            <li>{{ _("<strong>Edició avançada</strong>") }}</li>
+            <li>{{ _("Creació de la teva pròpia <strong>base de dades</strong> a partir del document") }}</li>
+            <li>{{ _("<strong>Bot de suport</strong> sobre qualsevol recerca del contingut del document") }}</li>
+            <li>{{ _("<strong>Historial complet</strong>, logs i versionat") }}</li>
+            <li>{{ _("Retenció <strong>30–90 dies</strong> (configurable) + esborrat sota demanda") }}</li>
+            <li>{{ _("<strong>Multiusuari</strong>, rols (Admin/operador)") }}</li>
+            <li>{{ _("Amb <strong>integració</strong>") }}</li>
+            <li>{{ _("<strong>Suport tècnic prioritari</strong>. Correu d’avís al acabar la transcripció") }}</li>
+            <li>{{ _("Model de IA <strong>avançat</strong>") }}</li>
+            <li>{{ _("<strong>Multi idioma</strong>") }}</li>
+            <li>{{ _("Transcripció de <strong>manuscrits</strong>") }}</li>
         </ul>
         </div>
 
@@ -373,26 +374,36 @@
 
     <div class="steps-container">
         <div class="step-card">
-        <img src="{{ url_for('static', filename='img/pas.png') }}" alt="Pas 1" />
-            <div class="step-content">
-                <strong>{{ _("PAS 1") }}</strong>
-                <div class="step-content-text">
-                    <h3>{{ _("Puja la teva imatge o document") }}</h3>
-                    <p>
-                    {{ _("Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. L’arrossegues, el puges i llest. No cal netejar la imatge ni saber si és OCR-friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs") }}
-                    </p>
-                </div>
+          <img src="{{ url_for('static', filename='img/pas.png') }}" alt="Pas 1" />
+          <div class="step-content">
+            <strong>{{ _("PAS 1") }}</strong>
+            <div class="step-content-text">
+              <p>{{ _("1) Donat d’alta com a usuari") }}</p>
+              <p>{{ _("2) Selecciona la modalitat FREE o PREMIUM") }}</p>
+              <p>{{ _("3) Selecciona el Pack de consum:") }}</p>
+
+              <ul class="packs-list">
+                <li>{{ _("De prova amb 10 crèdits per 0 €") }}</li>
+                <li>{{ _("Lite amb 200 crèdits (19 €)") }}</li>
+                <li>{{ _("Pro amb 1.000 crèdits (89 €)") }}</li>
+                <li>{{ _("Power amb 5.000 crèdits (275 €)") }}</li>
+              </ul>
+
+              <p class="credit-note">
+                  <span class="u-bold">{{ _("1 crèdit = 1 pàgina tipogràfica") }}</span></p>
+              <p class="muted">{{ _("Nota: El Pack no canvia les prestacions, únicament el consum") }}</p>
             </div>
+          </div>
         </div>
 
         <div class="step-card">
         <img src="{{ url_for('static', filename='img/pas.png') }}" alt="Pas 2" />
         <div class="step-content">
-            <strong>{{ _("PAS 1") }}</strong>
+            <strong>{{ _("PAS 2") }}</strong>
             <div class="step-content-text">
                 <h3>{{ _("Puja la teva imatge o document") }}</h3>
                 <p>
-                {{ _("Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. L’arrossegues, el puges i ja està. No cal netejar la imatge ni saber si és apta per a l’OCR. La nostra IA s’adapta. Admet JPG, PNG i PDF") }}
+                {{ _("Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. L’arrossegues, el puges i ja està. No cal netejar la imatge ni saber si és OCR friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs") }}
                 </p>
                 </div>
             </div>
@@ -401,11 +412,11 @@
         <div class="step-card">
         <img src="{{ url_for('static', filename='img/pas.png') }}" alt="Pas 3" />
         <div class="step-content">
-            <strong>{{ _("PAS 1") }}</strong>
+            <strong>{{ _("PAS 3") }}</strong>
             <div class="step-content-text">
-                <h3>{{ _("Puja la teva imatge o document") }}</h3>
+                <h3>{{ _("Gestiona") }}</h3>
                 <p>
-                {{ _("Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. L’arrossegues, el puges i llest. No cal netejar la imatge ni saber si és OCR-friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs") }}
+                {{ _("Consulta la transcripció, edita i modifica. Gestió de l’historial. Descarrega els documents que vulguis. Genera la base de dades que necessitis. Analitza el contingut del document amb un assistent especialitzat") }}
                 </p>
                 </div>
             </div>

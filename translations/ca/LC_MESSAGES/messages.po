@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-07 13:36+0200\n"
+"POT-Creation-Date: 2025-10-16 17:07+0200\n"
 "PO-Revision-Date: 2025-08-05 16:40+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: ca\n"
@@ -333,167 +333,274 @@ msgstr ""
 msgid "Sense targeta, sense compromís"
 msgstr ""
 
-#: templates/index.html:303
-msgid "GRATUÏT"
+#: templates/index.html:298
+msgid "10 crèdits al mes"
 msgstr ""
 
-#: templates/index.html:305 templates/index.html:330
+#: templates/index.html:304
+msgid "FREE"
+msgstr ""
+
+#: templates/index.html:306 templates/index.html:329
 msgid "al mes"
 msgstr ""
 
-#: templates/index.html:307 templates/index.html:332
+#: templates/index.html:308 templates/index.html:331
 msgid "Crear compte"
 msgstr ""
 
-#: templates/index.html:310
-msgid "20 crèdits al mes"
-msgstr ""
-
 #: templates/index.html:311
-msgid "Descàrrega de transcripcions <br> en txt"
+msgid "Descàrrega de transcripcions <br> en <strong>txt</strong>"
 msgstr ""
 
 #: templates/index.html:312
-msgid "20 descàrregues al mes"
+msgid ""
+"<strong>Càrrega documents 1 per 1</strong> (lots petits), sense ZIP, lots"
+" ni coles prioritzades."
 msgstr ""
 
 #: templates/index.html:313
-msgid "Model de IA básic"
+msgid "<strong>Edició manual</strong>/validació bàsica"
 msgstr ""
 
 #: templates/index.html:314
-msgid "Ideal per castellá, catalá i anglés"
+msgid "<strong>Historial</strong> dels darrers <strong>7 dies</strong>"
 msgstr ""
 
-#: templates/index.html:317 templates/index.html:342
-msgid "Edició manual en linea"
+#: templates/index.html:315
+msgid "Retenció <strong>7 dies</strong>"
 msgstr ""
 
-#: templates/index.html:320 templates/index.html:343
-msgid "Transcripció de manuscrits"
+#: templates/index.html:316
+msgid "<strong>1 usuari</strong>"
 msgstr ""
 
-#: templates/index.html:321 templates/index.html:344
-msgid "Correu d'avís al acabar una transcripció"
+#: templates/index.html:317
+msgid "<strong>Sense</strong> integracions"
 msgstr ""
 
-#: templates/index.html:322 templates/index.html:345
-msgid "Suport tècnic prioritari"
+#: templates/index.html:318
+msgid "<strong>Suport amb email estàndard</strong>"
 msgstr ""
 
-#: templates/index.html:328
-msgid "PRO"
+#: templates/index.html:319
+msgid "Model de IA <strong>bàsic</strong>"
+msgstr ""
+
+#: templates/index.html:320
+msgid "<strong>Castellà, català i anglès</strong>"
+msgstr ""
+
+#: templates/index.html:321
+msgid ""
+"No transcripció de manuscrits, <strong>només documents "
+"tipogràfics</strong>"
+msgstr ""
+
+#: templates/index.html:327
+msgid "PREMIUM"
+msgstr ""
+
+#: templates/index.html:334
+msgid "Descàrrega de transcripcions en <strong>TXT, DOCX o PDF</strong>"
 msgstr ""
 
 #: templates/index.html:335
-msgid "500 crèdits al mes"
+msgid ""
+"<strong>Càrrega massiva</strong> documents per lots, carpetes ZIP, o "
+"coles prioritzades"
 msgstr ""
 
 #: templates/index.html:336
-msgid "Descàrrega de transcripcions <br> en txt, pdf i docx"
+msgid "<strong>Edició avançada</strong>"
 msgstr ""
 
 #: templates/index.html:337
-msgid "100 descàrregues al mes"
+msgid ""
+"Creació de la teva pròpia <strong>base de dades</strong> a partir del "
+"document"
 msgstr ""
 
 #: templates/index.html:338
-msgid "Model de IA avançat"
+msgid ""
+"<strong>Bot de suport</strong> sobre qualsevol recerca del contingut del "
+"document"
 msgstr ""
 
 #: templates/index.html:339
-msgid "Ideal per múltiples idiomes"
+msgid "<strong>Historial complet</strong>, logs i versionat"
 msgstr ""
 
-#: templates/index.html:351
-msgid "UTILITATS"
+#: templates/index.html:340
+msgid ""
+"Retenció <strong>30–90 dies</strong> (configurable) + esborrat sota "
+"demanda"
+msgstr ""
+
+#: templates/index.html:341
+msgid "<strong>Multiusuari</strong>, rols (Admin/operador)"
+msgstr ""
+
+#: templates/index.html:342
+msgid "Amb <strong>integració</strong>"
+msgstr ""
+
+#: templates/index.html:343
+msgid ""
+"<strong>Suport tècnic prioritari</strong>. Correu d’avís al acabar la "
+"transcripció"
+msgstr ""
+
+#: templates/index.html:344
+msgid "Model de IA <strong>avançat</strong>"
+msgstr ""
+
+#: templates/index.html:345
+msgid "<strong>Multi idioma</strong>"
+msgstr ""
+
+#: templates/index.html:346
+msgid "Transcripció de <strong>manuscrits</strong>"
 msgstr ""
 
 #: templates/index.html:352
+msgid "UTILITATS"
+msgstr ""
+
+#: templates/index.html:353
 msgid "Descobreix tot el que pots fer amb aquesta eina"
 msgstr ""
 
-#: templates/index.html:356
+#: templates/index.html:357
 msgid "Convertir imatges en text sense esforç"
 msgstr ""
 
-#: templates/index.html:357
+#: templates/index.html:358
 msgid "Treballar amb dades en eines conegudes"
 msgstr ""
 
-#: templates/index.html:358
+#: templates/index.html:359
 msgid "Extreure i unificar noms, dates, llocs, professors, etc."
 msgstr ""
 
-#: templates/index.html:359
+#: templates/index.html:360
 msgid "Obté resultats nets fins i tot de digitalitzats difícils"
 msgstr ""
 
-#: templates/index.html:360
+#: templates/index.html:361
 msgid "Centenars de documents de cop, sense teclejar manualment"
 msgstr ""
 
-#: templates/index.html:361
+#: templates/index.html:362
 msgid ""
 "Ideal per a arxius i investigadors. Mantén l’arxiu digital ordenat i "
 "accessible"
 msgstr ""
 
-#: templates/index.html:362
+#: templates/index.html:363
 msgid ""
 "Transcriu i adapta el flux a les teves necessitats. Resol dubtes reals "
 "amb persones, no formularis."
 msgstr ""
 
-#: templates/index.html:363
+#: templates/index.html:364
 msgid "Revisa el que has fet i no perdràs res"
 msgstr ""
 
-#: templates/index.html:372
+#: templates/index.html:373
 msgid "Així funciona la nostra plataforma"
 msgstr ""
 
-#: templates/index.html:378 templates/index.html:391 templates/index.html:404
+#: templates/index.html:379
 msgid "PAS 1"
 msgstr ""
 
-#: templates/index.html:380 templates/index.html:393 templates/index.html:406
+#: templates/index.html:381
+msgid "1) Donat d’alta com a usuari"
+msgstr ""
+
+#: templates/index.html:382
+msgid "2) Selecciona la modalitat FREE o PREMIUM"
+msgstr ""
+
+#: templates/index.html:383
+msgid "3) Selecciona el Pack de consum:"
+msgstr ""
+
+#: templates/index.html:386
+msgid "De prova amb 10 crèdits per 0 €"
+msgstr ""
+
+#: templates/index.html:387
+msgid "Lite amb 200 crèdits (19 €)"
+msgstr ""
+
+#: templates/index.html:388
+msgid "Pro amb 1.000 crèdits (89 €)"
+msgstr ""
+
+#: templates/index.html:389
+msgid "Power amb 5.000 crèdits (275 €)"
+msgstr ""
+
+#: templates/index.html:393
+msgid "1 crèdit = 1 pàgina tipogràfica"
+msgstr ""
+
+#: templates/index.html:394
+msgid "Nota: El Pack no canvia les prestacions, únicament el consum"
+msgstr ""
+
+#: templates/index.html:402
+msgid "PAS 2"
+msgstr ""
+
+#: templates/index.html:404
 msgid "Puja la teva imatge o document"
 msgstr ""
 
-#: templates/index.html:382 templates/index.html:408
-msgid ""
-"Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. "
-"L’arrossegues, el puges i llest. No cal netejar la imatge ni saber si és "
-"OCR-friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs"
-msgstr ""
-
-#: templates/index.html:395
+#: templates/index.html:406
 msgid ""
 "Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. "
 "L’arrossegues, el puges i ja està. No cal netejar la imatge ni saber si "
-"és apta per a l’OCR. La nostra IA s’adapta. Admet JPG, PNG i PDF"
+"és OCR friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs"
 msgstr ""
 
-#: templates/index.html:418
+#: templates/index.html:415
+msgid "PAS 3"
+msgstr ""
+
+#: templates/index.html:417
+msgid "Gestiona"
+msgstr ""
+
+#: templates/index.html:419
+msgid ""
+"Consulta la transcripció, edita i modifica. Gestió de l’historial. "
+"Descarrega els documents que vulguis. Genera la base de dades que "
+"necessitis. Analitza el contingut del document amb un assistent "
+"especialitzat"
+msgstr ""
+
+#: templates/index.html:429
 msgid ""
 "Tens molts documents per digitalitzar o necessites adaptar el flux a la "
 "teva organització?"
 msgstr ""
 
-#: templates/index.html:419
+#: templates/index.html:430
 msgid "Oferim solucions a mida per a arxius, investigadors i administracions."
 msgstr ""
 
-#: templates/index.html:428
+#: templates/index.html:439
 msgid "PROVA LA PLATAFORMA GRATIS"
 msgstr ""
 
-#: templates/index.html:429
+#: templates/index.html:440
 msgid "PROVA GRATUITA"
 msgstr ""
 
-#: templates/index.html:431
+#: templates/index.html:442
 msgid "CONTACTE DIRECTE"
 msgstr ""
 
@@ -605,5 +712,83 @@ msgstr ""
 #~ msgstr ""
 
 #~ msgid "Historial i recuperació"
+#~ msgstr ""
+
+#~ msgid "GRATUÏT"
+#~ msgstr ""
+
+#~ msgid "20 crèdits al mes"
+#~ msgstr ""
+
+#~ msgid "Descàrrega de transcripcions <br> en txt"
+#~ msgstr ""
+
+#~ msgid "20 descàrregues al mes"
+#~ msgstr ""
+
+#~ msgid "Model de IA básic"
+#~ msgstr ""
+
+#~ msgid "Ideal per castellá, catalá i anglés"
+#~ msgstr ""
+
+#~ msgid "Edició manual en linea"
+#~ msgstr ""
+
+#~ msgid "Transcripció de manuscrits"
+#~ msgstr ""
+
+#~ msgid "Correu d'avís al acabar una transcripció"
+#~ msgstr ""
+
+#~ msgid "Suport tècnic prioritari"
+#~ msgstr ""
+
+#~ msgid "PRO"
+#~ msgstr ""
+
+#~ msgid "500 crèdits al mes"
+#~ msgstr ""
+
+#~ msgid "Descàrrega de transcripcions <br> en txt, pdf i docx"
+#~ msgstr ""
+
+#~ msgid "100 descàrregues al mes"
+#~ msgstr ""
+
+#~ msgid "Model de IA avançat"
+#~ msgstr ""
+
+#~ msgid "Ideal per múltiples idiomes"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Admet imatges antigues, una foto des "
+#~ "del mòbil o un escaneig en PDF."
+#~ " L’arrossegues, el puges i llest. No"
+#~ " cal netejar la imatge ni saber "
+#~ "si és OCR-friendly. La nostra IA"
+#~ " s’adapta. Admet JPG, PNG i PDFs"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Admet imatges antigues, una foto des "
+#~ "del mòbil o un escaneig en PDF."
+#~ " L’arrossegues, el puges i ja està."
+#~ " No cal netejar la imatge ni "
+#~ "saber si és apta per a l’OCR. "
+#~ "La nostra IA s’adapta. Admet JPG, "
+#~ "PNG i PDF"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Consulta la transcripció, edita i "
+#~ "modifica. Gestió de l’historial. Descàrrega"
+#~ "\n"
+#~ "                    els documents que vulguis."
+#~ " Genera la base de dades que "
+#~ "necessitis.\n"
+#~ "                    Analitza el contingut del"
+#~ " document amb un assistent especialitzat"
 #~ msgstr ""
 

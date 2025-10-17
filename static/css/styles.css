@@ -374,19 +374,21 @@ html {
   padding: 2rem;
   flex: 1 1 220px;
   max-width: 350px;
-  height: 600px;
   text-align: left;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   border: 1px solid var(--gris-suau);
+    height: auto;          /* antes: 600px */
+  min-height: 640px;     /* asegura alineación visual similar */
 }
 
 .plan-column h3,
 .plan-column h4 {
   font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 1rem;
+  font-size: 0.45rem;    /* antes: 1rem */
+  margin-bottom: 0.7rem; /* antes: 1rem */
   color: var(--gris-fosc);
 }
 
@@ -468,7 +470,7 @@ html {
   border: 2px solid var(--turquesa-clar);
   z-index: 3;
   max-width: 300px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 3px 7px rgba(0,0,0,0.1);
   
 }
 
@@ -711,6 +713,180 @@ html {
   color: var(--blanc);
 }
 
+
+/* 2) Tipografías y espacios algo más compactos */
+.plans h2 {
+  font-size: 1.35rem;    /* antes: 1.5rem */
+  margin-bottom: 2.2rem; /* antes: 3rem */
+}
+
+.price-period,
+.plan-column a {
+  font-size: 0.85rem;    /* antes: 0.9rem */
+  margin-bottom: 0.7rem; /* antes: 1rem */
+}
+
+.separator {
+  margin: 0.2rem 0 0.8rem;
+}
+
+/* Listas más compactas */
+.check-list li,
+.cross-list li,
+.list-list li {
+  font-size: 0.8rem;     /* antes: 0.85rem */
+  line-height: 1.35;     /* antes: 1.4 */
+  margin-bottom: 0.7rem; /* antes: 1rem */
+  padding-left: 1rem;    /* antes: 1.2rem */
+}
+/* Utils (cuarta columna) a juego */
+.plan-column.utils p {
+  font-size: 0.85rem;    /* antes: 0.9rem */
+  margin-bottom: 0.8rem; /* antes: 1rem */
+}
+.plan-column.utils ul li {
+  font-size: 0.8rem;     /* antes: 0.85rem */
+
+}
+
+/* HOW-IT-WORKS: lista de PAS 1 como texto normal */
+.how-it-works .step-content {
+  justify-content: flex-start;          /* deja de centrar la columna de texto */
+}
+
+.how-it-works .step-content-text ul.packs-list {
+  list-style: disc;                      /* bullets estándar */
+  padding-left: 1.9rem;                  /* sangría normal */
+  margin: 0;                             /* como tus <p> */
+  text-align: left;                      /* explícito */
+}
+
+.how-it-works .step-content-text ul.packs-list li {
+  color: var(--gris-mitja);              /* mismo gris que p */
+  font-size: 0.8rem;                     /* mismo tamaño que p */
+  line-height: 1.4;                      /* mismo interlineado que p */
+  margin: 0;                             /* igual que p */
+}
+
+/* color también en el marcador (bullet) */
+.how-it-works .step-content-text ul.packs-list li::marker {
+  color: var(--gris-mitja);
+
+}
+
+/* por si alguna regla global añade pseudo-elementos tipo check */
+.how-it-works .step-content-text ul.packs-list li::before {
+  content: none !important;
+}
+
+.u-bold {
+  font-weight: 700;
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+  color: inherit;
+}
+
+.how-it-works .step-card{
+  height: auto !important;
+  max-height: none !important;   /* elimina el tope que está cortando el texto */
+  overflow: visible;             /* por si algún overflow ocultaba el final */
+}
+
+/* un poco más de respiración abajo */
+.how-it-works .step-content{
+  padding-bottom: 18px;
+}
+
+/* asegura que todas las tarjetas se estiren a su contenido */
+.how-it-works .steps-container{
+  align-items: stretch;
+}
+
+.how-it-works .step-card {
+  display: flex;
+  flex-direction: column;
+}
+
+/* La imagen arriba; el contenido ocupa el resto para poder centrarlo */
+.how-it-works .step-card > img {
+  display: block;
+}
+.how-it-works .step-content {
+  flex: 1;                    /* llena el espacio bajo la imagen */
+  display: grid;              /* ya lo usas: badge + texto */
+  grid-template-columns: auto 1fr;
+  align-items: center;        /* <-- centra verticalmente PAS 2 y PAS 3 */
+}
+
+/* Un pelín más de interlineado en el texto (títulos, párrafos y listas) */
+.how-it-works .step-content-text h3 {
+  margin-top: 0;
+  line-height: 1.25;
+}
+.how-it-works .step-content-text p,
+.how-it-works .step-content-text li {
+  line-height: 1.45;          /* antes era ~1.35–1.4: un pelín más */
+}
+@media (max-width: 768px) {
+
+  /* Elimina restricciones que cortan o desbordan */
+  .plan-column.pro {
+    max-width: 100% !important;
+    width: 100%;
+    min-height: auto;
+    height: auto;
+    box-sizing: border-box;
+    overflow: visible;              /* asegura que no corte el texto */
+    padding-bottom: 2.5rem;         /* deja espacio al final */
+    margin-bottom: 2rem;            /* separa bien del siguiente bloque */
+  }
+
+  /* Evita que el contenido interno se pegue al borde */
+  .plan-column.pro .check-list li {
+    word-wrap: break-word;
+    white-space: normal;
+  }
+
+  /* Quita el solapamiento entre PREMIUM y UTILITATS */
+  .plan-column.pro + .plan-column.utils {
+    margin-top: 1rem;
+    margin-left: 0;
+  }
+
+  /* Asegura que las columnas sigan un flujo natural */
+  .plans-container {
+    gap: 1.5rem;
+    flex-direction: column;
+  }
+}
+@media (max-width: 768px) {
+
+  /* anula el grid heredado de desktop */
+  .how-it-works .step-content {
+    display: flex !important;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  /* "PAS X" más pequeño y con menos ancho reservado */
+  .how-it-works .step-content > strong {
+    font-size: 1.2rem;     /* antes ~1.2rem */
+    min-width: 4.2rem;   /* antes ~3.4rem en desktop */
+    width: 2.2rem;
+    padding-left: 0.25rem;
+  }
+
+  /* quita el padding del bloque de texto para pegarlo más a la izquierda */
+  .how-it-works .step-content-text {
+    padding: 0;
+  }
+
+  /* sangría de la lista un poco más corta */
+  .how-it-works .step-content-text ul.packs-list {
+    padding-left: 1.6rem; /* antes: 1.9rem */
+  }
+}
 @media (max-width: 768px) {
 
   body {
