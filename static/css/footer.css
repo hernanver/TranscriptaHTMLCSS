@@ -1,69 +1,113 @@
-.site-footer {
-  border-top: 1px solid #e6e6e6;
-  background: #fafafa;
-  padding: 16px 20px;
+:root{
+  --gris-borde: #e6e6e6;
+  --gris-clar:  #f4f4f4;
+  --gris-texto: #666666;
 }
 
-.footer-inner {
+.site-footer{
+  border-top: 1px solid var(--gris-borde);
+  background: var(--gris-clar);
+  padding: 20px 16px;
+}
+.site-footer .footer-inner{
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 16px;
   display: flex;
   flex-direction: column;
   gap: 12px;
-  max-width: 1100px;
-  margin: 0 auto;
 }
 
-.footer-logos {
-  display: flex;
-  flex-wrap: wrap;
+/* ---- Rail de logos con fade en bordes */
+.site-footer .footer-logos{
+  position: relative;
+  overflow: hidden;
+}
+
+/* Cortinillas de fade (desvanecer en los extremos) */
+.site-footer .footer-logos::before,
+.site-footer .footer-logos::after{
+  content:"";
+  position:absolute;
+  top:0; bottom:0; width:60px;
+  pointer-events:none;
+  z-index:2;
+}
+.site-footer .footer-logos::before{
+  left:0;
+  background: linear-gradient(to right, var(--gris-clar) 0%, rgba(244,244,244,0));
+}
+.site-footer .footer-logos::after{
+  right:0;
+  background: linear-gradient(to left, var(--gris-clar) 0%, rgba(244,244,244,0));
+}
+
+/* Pista (el JS la crea/mueve) — mismo spacing que en la plataforma */
+.site-footer .footer-logos .logo-track{
+  display: inline-flex;
   align-items: center;
-  gap: 28px 36px;
+  gap: 1.25rem;
+  padding: .25rem 0;
+  will-change: transform;
+  white-space: nowrap;
 }
 
-.footer-logos .logo {
-  height: 56px;
-  object-fit: contain;
-  /* opcional: asegura un mínimo de ancho visual para que no se peguen */
-  min-width: 140px;
-}
-
-.funding-note {
-  font-size: 0.95rem;
-  line-height: 1.35;
-  color: #444;
-  margin: 0;
-}
-
-.footer-logos img.logo {
-  max-height: 56px;
+/* Cada logo: padding lateral grande + altura base */
+.site-footer .footer-logos .logo-track .logo{
+  height: 70px;           /* usa 70px como en plataforma; baja a 56px si lo prefieres */
   width: auto;
+  flex: 0 0 auto;
+  display: block;
   object-fit: contain;
+  padding: .25rem 3.5rem; /* CLAVE: separa visualmente los logos (sumado al gap) */
+  opacity: .85;
+  transform: scale(.95);
+  transition: opacity .3s ease, transform .3s ease;
+}
+.site-footer .footer-logos .logo-track .logo:hover{
+  opacity: 1;
+  transform: scale(1.05);
 }
 
-/* móvil: logos más pequeños y menos padding/espacio */
-@media (max-width: 640px) {
-  .site-footer { padding: 12px 16px; }
-  .footer-logos { gap: 10px 14px; }
-
-  .footer-logos img.logo {
-    max-height: 43px;   /* ↓ antes 56px */
-  }
-
-  .funding-note { font-size: 0.9rem; line-height: 1.3; }
+/* ---- Nota de financiación */
+.site-footer .funding-note{
+  margin-top: .75rem;
+  color: var(--gris-texto);
+  font-size: .95rem;
+  line-height: 1.35;
+  text-align: center;
 }
 
-@media (max-width: 640px) {
-  .footer-logos {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 12px 16px;
-  }
-  .footer-logos .logo {
-    flex: 0 1 calc(50% - 16px);
-    max-height: 32px;
-  }
-  .footer-logos .logo:nth-of-type(3) {
-    flex-basis: 100%;
-    text-align: center;
+/* ---- Enlaces legales y contacto */
+.site-footer .footer-links{
+  margin-top: .5rem;
+  text-align: center;
+  color: var(--gris-texto);
+  font-size: .95rem;
+}
+.site-footer .footer-links a{
+  color: inherit;
+  text-decoration: none;
+}
+.site-footer .footer-links a:hover{
+  text-decoration: underline;
+}
+.site-footer .footer-links .sep{ margin: 0 .4rem; }
+
+/* ---- Copyright */
+.site-footer .footer-copy{
+  margin-top: .35rem;
+  text-align: center;
+  color: var(--gris-texto);
+  font-size: .95rem;
+}
+
+/* ---- Responsive */
+@media (max-width: 640px){
+  .site-footer{ padding: 16px; }
+  .site-footer .footer-logos .logo-track{ gap: 1rem; }
+  .site-footer .footer-logos .logo-track .logo{
+    height: 56px;
+    padding: .25rem 2rem;
   }
 }

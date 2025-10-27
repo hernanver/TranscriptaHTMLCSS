@@ -1,12 +1,12 @@
 <footer class="site-footer mt-auto">
   <div class="footer-inner" role="contentinfo" aria-label="{{ _('Finançament NextGenerationEU') }}">
+    <!-- Logos (igual que en la plataforma) -->
     <div class="footer-logos" role="contentinfo">
-
-      {# PRTR: ES/EN → logo en castellano; CA → logo en català #}
+      {# PRTR: ES/EN → logo ES; CA → logo CA #}
       {% if get_locale() and get_locale().language in ['es','en'] %}
         <img
           src="{{ url_for('static', filename='img/Logo-PRTR-ES-trim.png') }}"
-          alt="{{ _('Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya') }}"
+          alt="{{ _('Plan de Recuperación, Transformación y Resiliencia – Gobierno de España') if (get_locale() and get_locale().language=='es') else _('Recovery, Transformation and Resilience Plan – Government of Spain') }}"
           class="logo prtr" height="56" loading="lazy">
       {% else %}
         <img
@@ -19,7 +19,7 @@
       {% if get_locale() and get_locale().language == 'en' %}
         <img
           src="{{ url_for('static', filename='img/EN_FundedbytheEU_RGB_POS.png') }}"
-          alt="{{ _('Finançat per la Unió Europea – NextGenerationEU') }}"
+          alt="{{ _('Funded by the European Union – NextGenerationEU') }}"
           class="logo eu" height="56" loading="lazy">
       {% else %}
         <img
@@ -34,9 +34,29 @@
         class="logo cat" height="56" loading="lazy">
     </div>
 
+    <!-- Nota -->
     <p class="funding-note">
-      {{ _('Aquest projecte està finançat per la Unió Europea – NextGenerationEU.') }}<br>
-      {{ _('Amb el suport de la Generalitat de Catalunya.') }}
+      {{ _('Aquest projecte està ') }}<strong>{{ _('finançat per la Unió Europea – NextGenerationEU') }}</strong>.
     </p>
+
+    <!-- Enlaces legales y contacto (copiados de la plataforma) -->
+    <div class="footer-links">
+      <!-- Ajusta los url_for a tus endpoints en Flask si los tienes -->
+      <a href="https://ai.transcridata.io/aviso-legal/">{{ _('Avís legal') }}</a>
+      <span class="sep">·</span>
+      <a href="https://ai.transcridata.io/privacidad/">{{ _('Política de privacitat') }}</a>
+      <span class="sep">·</span>
+      <a href="https://www.transcridata.io/contacto" rel="noopener">{{ _('Contacte') }}</a>
+    </div>
+
+    <!-- Copyright -->
+    <div class="footer-copy">
+      © <span id="copy-year"></span> {{ _('ÀgoraTechAI · Tots els drets reservats') }}
+    </div>
   </div>
 </footer>
+
+<script>
+  (function(){ var y=document.getElementById('copy-year'); if(y) y.textContent=(new Date()).getFullYear(); })();
+</script>
+<script src="{{ url_for('static', filename='js/footer-logos.js') }}"></script>

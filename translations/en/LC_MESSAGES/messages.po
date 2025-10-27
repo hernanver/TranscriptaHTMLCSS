@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-16 17:07+0200\n"
+"POT-Creation-Date: 2025-10-27 10:42+0100\n"
 "PO-Revision-Date: 2025-08-05 16:40+0200\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language: en\n"
@@ -18,51 +18,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: templates/contacto.html:6
+#: templates/contacto.html:6 templates/footer.html:49
 msgid "Contacte"
 msgstr "Contact"
 
-#: templates/contacto.html:16
+#: templates/contacto.html:17
 msgid "Formulari de contacte"
 msgstr "Contact form"
 
-#: templates/contacto.html:29
+#: templates/contacto.html:30
 msgid "Nom"
 msgstr "Name"
 
-#: templates/contacto.html:34
+#: templates/contacto.html:35
 msgid "Cognoms"
 msgstr "Surnames"
 
-#: templates/contacto.html:41
+#: templates/contacto.html:42
 msgid "Correu electrònic"
 msgstr "Email address"
 
-#: templates/contacto.html:46
+#: templates/contacto.html:47
 msgid "Idioma de resposta"
 msgstr "Response language"
 
-#: templates/contacto.html:48
+#: templates/contacto.html:49
 msgid "Català"
 msgstr "Catalan"
 
-#: templates/contacto.html:49
+#: templates/contacto.html:50
 msgid "Español"
 msgstr "Spanish"
 
-#: templates/contacto.html:50
+#: templates/contacto.html:51
 msgid "English"
 msgstr "English"
 
-#: templates/contacto.html:56
+#: templates/contacto.html:57
 msgid "Missatge"
 msgstr "Message"
 
-#: templates/contacto.html:61
+#: templates/contacto.html:62
 msgid "Arxiu adjunt (opcional)"
 msgstr "Attachment (optional)"
 
-#: templates/contacto.html:66
+#: templates/contacto.html:67
 msgid "Enviar"
 msgstr "Send"
 
@@ -70,25 +70,49 @@ msgstr "Send"
 msgid "Finançament NextGenerationEU"
 msgstr "NextGenerationEU funding"
 
-#: templates/footer.html:9 templates/footer.html:14
+#: templates/footer.html:9
+msgid "Plan de Recuperación, Transformación y Resiliencia – Gobierno de España"
+msgstr "Recovery, Transformation and Resilience Plan – Government of Spain"
+
+#: templates/footer.html:9
+msgid "Recovery, Transformation and Resilience Plan – Government of Spain"
+msgstr "Recovery, Transformation and Resilience Plan – Government of Spain"
+
+#: templates/footer.html:14
 msgid "Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya"
 msgstr "Recovery, Transformation and Resilience Plan – Government of Spain"
 
-#: templates/footer.html:22 templates/footer.html:27
+#: templates/footer.html:22
+msgid "Funded by the European Union – NextGenerationEU"
+msgstr "Funded by the European Union – NextGenerationEU"
+
+#: templates/footer.html:27
 msgid "Finançat per la Unió Europea – NextGenerationEU"
 msgstr "Funded by the European Union – NextGenerationEU"
 
 #: templates/footer.html:33
 msgid "Generalitat de Catalunya - Secretaria de Treball"
-msgstr "Government of Catalonia - Labour Secretariat"
-
-#: templates/footer.html:38
-msgid "Aquest projecte està finançat per la Unió Europea – NextGenerationEU."
-msgstr "This project has been funded by the European Union – NextGenerationEU."
+msgstr "Government of Catalonia – Labour Secretariat"
 
 #: templates/footer.html:39
-msgid "Amb el suport de la Generalitat de Catalunya."
-msgstr "With the support of the Government of Catalonia."
+msgid "Aquest projecte està "
+msgstr "This project is "
+
+#: templates/footer.html:39
+msgid "finançat per la Unió Europea – NextGenerationEU"
+msgstr "funded by the European Union – NextGenerationEU"
+
+#: templates/footer.html:45
+msgid "Avís legal"
+msgstr "Legal notice"
+
+#: templates/footer.html:47
+msgid "Política de privacitat"
+msgstr "Privacy policy"
+
+#: templates/footer.html:54
+msgid "ÀgoraTechAI · Tots els drets reservats"
+msgstr "ÀgoraTechAI · All rights reserved"
 
 #: templates/header.html:47
 msgid "Menú"
@@ -396,7 +420,9 @@ msgstr "Download transcripts <br> in <strong>txt</strong>"
 msgid ""
 "<strong>Càrrega documents 1 per 1</strong> (lots petits), sense ZIP, lots"
 " ni coles prioritzades."
-msgstr "<strong>Upload documents one by one</strong> (small batches), no ZIP, no grouped uploads or priority queues."
+msgstr ""
+"<strong>Upload documents one by one</strong> (small batches), no ZIP, no "
+"grouped uploads or priority queues."
 
 #: templates/index.html:313
 msgid "<strong>Edició manual</strong>/validació bàsica"
@@ -448,7 +474,9 @@ msgstr "Download transcripts in <strong>TXT, DOCX or PDF</strong>"
 msgid ""
 "<strong>Càrrega massiva</strong> documents per lots, carpetes ZIP, o "
 "coles prioritzades"
-msgstr "<strong>Bulk upload</strong> of documents by batches, ZIP folders or priority queues"
+msgstr ""
+"<strong>Bulk upload</strong> of documents by batches, ZIP folders or "
+"priority queues"
 
 #: templates/index.html:336
 msgid "<strong>Edició avançada</strong>"
@@ -474,7 +502,9 @@ msgstr "<strong>Full history</strong>, logs and versioning"
 msgid ""
 "Retenció <strong>30–90 dies</strong> (configurable) + esborrat sota "
 "demanda"
-msgstr "Retention of <strong>30–90 days</strong> (configurable) + deletion on demand"
+msgstr ""
+"Retention of <strong>30–90 days</strong> (configurable) + deletion on "
+"demand"
 
 #: templates/index.html:341
 msgid "<strong>Multiusuari</strong>, rols (Admin/operador)"
@@ -488,7 +518,9 @@ msgstr "With <strong>integration</strong>"
 msgid ""
 "<strong>Suport tècnic prioritari</strong>. Correu d’avís al acabar la "
 "transcripció"
-msgstr "<strong>Priority technical support</strong>. Email notification when transcription is completed"
+msgstr ""
+"<strong>Priority technical support</strong>. Email notification when "
+"transcription is completed"
 
 #: templates/index.html:344
 msgid "Model de IA <strong>avançat</strong>"
@@ -534,13 +566,17 @@ msgstr "Hundreds of documents at once, without manual typing"
 msgid ""
 "Ideal per a arxius i investigadors. Mantén l’arxiu digital ordenat i "
 "accessible"
-msgstr "Ideal for archives and researchers. Keep your digital archive organized and accessible"
+msgstr ""
+"Ideal for archives and researchers. Keep your digital archive organized "
+"and accessible"
 
 #: templates/index.html:363
 msgid ""
 "Transcriu i adapta el flux a les teves necessitats. Resol dubtes reals "
 "amb persones, no formularis."
-msgstr "Transcribe and adapt the workflow to your needs. Solve real questions with people, not forms."
+msgstr ""
+"Transcribe and adapt the workflow to your needs. Solve real questions "
+"with people, not forms."
 
 #: templates/index.html:364
 msgid "Revisa el que has fet i no perdràs res"
@@ -555,16 +591,16 @@ msgid "PAS 1"
 msgstr "STEP 1"
 
 #: templates/index.html:381
-msgid "1) Donat d’alta com a usuari"
-msgstr "1) Sign up as a user"
+msgid "Donat d’alta com a usuari"
+msgstr "Sign up as a user"
 
 #: templates/index.html:382
-msgid "2) Selecciona la modalitat FREE o PREMIUM"
-msgstr "2) Select the FREE or PREMIUM plan"
+msgid "1) Selecciona la modalitat FREE o PREMIUM"
+msgstr "1) Select the FREE or PREMIUM plan"
 
 #: templates/index.html:383
-msgid "3) Selecciona el Pack de consum:"
-msgstr "3) Select your consumption pack:"
+msgid "2) Selecciona el Pack de consum:"
+msgstr "2) Select your credit pack:"
 
 #: templates/index.html:386
 msgid "De prova amb 10 crèdits per 0 €"
@@ -603,7 +639,10 @@ msgid ""
 "Admet imatges antigues, una foto des del mòbil o un escaneig en PDF. "
 "L’arrossegues, el puges i ja està. No cal netejar la imatge ni saber si "
 "és OCR friendly. La nostra IA s’adapta. Admet JPG, PNG i PDFs"
-msgstr "Accepts old images, a photo from your phone, or a scanned PDF. Just drag and upload — no need to clean the image or check OCR compatibility. Our AI adapts automatically. Accepts JPG, PNG, and PDFs."
+msgstr ""
+"Accepts old images, a photo from your phone, or a scanned PDF. Just drag "
+"and upload — no need to clean the image or check OCR compatibility. Our "
+"AI adapts automatically. Accepts JPG, PNG, and PDFs."
 
 #: templates/index.html:415
 msgid "PAS 3"
@@ -619,7 +658,10 @@ msgid ""
 "Descarrega els documents que vulguis. Genera la base de dades que "
 "necessitis. Analitza el contingut del document amb un assistent "
 "especialitzat"
-msgstr "Review the transcription, edit and modify it. Manage your history. Download any documents you want. Generate the database you need. Analyze the document’s content with a specialized assistant."
+msgstr ""
+"Review the transcription, edit and modify it. Manage your history. "
+"Download any documents you want. Generate the database you need. Analyze "
+"the document’s content with a specialized assistant."
 
 #: templates/index.html:429
 msgid ""
@@ -719,4 +761,10 @@ msgstr "DIRECT CONTACT"
 #~ "                    Analitza el contingut del"
 #~ " document amb un assistent especialitzat"
 #~ msgstr ""
+
+#~ msgid "Aquest projecte està finançat per la Unió Europea – NextGenerationEU."
+#~ msgstr "This project has been funded by the European Union – NextGenerationEU."
+
+#~ msgid "Amb el suport de la Generalitat de Catalunya."
+#~ msgstr "With the support of the Government of Catalonia."
 

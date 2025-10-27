@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PROJECT VERSION\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
-"POT-Creation-Date: 2025-10-16 17:07+0200\n"
+"POT-Creation-Date: 2025-10-27 10:42+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,51 +17,51 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Generated-By: Babel 2.17.0\n"
 
-#: templates/contacto.html:6
+#: templates/contacto.html:6 templates/footer.html:49
 msgid "Contacte"
 msgstr ""
 
-#: templates/contacto.html:16
+#: templates/contacto.html:17
 msgid "Formulari de contacte"
 msgstr ""
 
-#: templates/contacto.html:29
+#: templates/contacto.html:30
 msgid "Nom"
 msgstr ""
 
-#: templates/contacto.html:34
+#: templates/contacto.html:35
 msgid "Cognoms"
 msgstr ""
 
-#: templates/contacto.html:41
+#: templates/contacto.html:42
 msgid "Correu electrònic"
 msgstr ""
 
-#: templates/contacto.html:46
+#: templates/contacto.html:47
 msgid "Idioma de resposta"
 msgstr ""
 
-#: templates/contacto.html:48
+#: templates/contacto.html:49
 msgid "Català"
 msgstr ""
 
-#: templates/contacto.html:49
+#: templates/contacto.html:50
 msgid "Español"
 msgstr ""
 
-#: templates/contacto.html:50
+#: templates/contacto.html:51
 msgid "English"
 msgstr ""
 
-#: templates/contacto.html:56
+#: templates/contacto.html:57
 msgid "Missatge"
 msgstr ""
 
-#: templates/contacto.html:61
+#: templates/contacto.html:62
 msgid "Arxiu adjunt (opcional)"
 msgstr ""
 
-#: templates/contacto.html:66
+#: templates/contacto.html:67
 msgid "Enviar"
 msgstr ""
 
@@ -69,11 +69,23 @@ msgstr ""
 msgid "Finançament NextGenerationEU"
 msgstr ""
 
-#: templates/footer.html:9 templates/footer.html:14
+#: templates/footer.html:9
+msgid "Plan de Recuperación, Transformación y Resiliencia – Gobierno de España"
+msgstr ""
+
+#: templates/footer.html:9
+msgid "Recovery, Transformation and Resilience Plan – Government of Spain"
+msgstr ""
+
+#: templates/footer.html:14
 msgid "Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya"
 msgstr ""
 
-#: templates/footer.html:22 templates/footer.html:27
+#: templates/footer.html:22
+msgid "Funded by the European Union – NextGenerationEU"
+msgstr ""
+
+#: templates/footer.html:27
 msgid "Finançat per la Unió Europea – NextGenerationEU"
 msgstr ""
 
@@ -81,12 +93,24 @@ msgstr ""
 msgid "Generalitat de Catalunya - Secretaria de Treball"
 msgstr ""
 
-#: templates/footer.html:38
-msgid "Aquest projecte està finançat per la Unió Europea – NextGenerationEU."
+#: templates/footer.html:39
+msgid "Aquest projecte està "
 msgstr ""
 
 #: templates/footer.html:39
-msgid "Amb el suport de la Generalitat de Catalunya."
+msgid "finançat per la Unió Europea – NextGenerationEU"
+msgstr ""
+
+#: templates/footer.html:45
+msgid "Avís legal"
+msgstr ""
+
+#: templates/footer.html:47
+msgid "Política de privacitat"
+msgstr ""
+
+#: templates/footer.html:54
+msgid "ÀgoraTechAI · Tots els drets reservats"
 msgstr ""
 
 #: templates/header.html:47
@@ -515,15 +539,15 @@ msgid "PAS 1"
 msgstr ""
 
 #: templates/index.html:381
-msgid "1) Donat d’alta com a usuari"
+msgid "Donat d’alta com a usuari"
 msgstr ""
 
 #: templates/index.html:382
-msgid "2) Selecciona la modalitat FREE o PREMIUM"
+msgid "1) Selecciona la modalitat FREE o PREMIUM"
 msgstr ""
 
 #: templates/index.html:383
-msgid "3) Selecciona el Pack de consum:"
+msgid "2) Selecciona el Pack de consum:"
 msgstr ""
 
 #: templates/index.html:386
