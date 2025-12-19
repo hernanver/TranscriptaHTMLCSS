@@ -4,70 +4,34 @@
   --gris-texto: #666666;
 }
 
-.site-footer{
-  border-top: 1px solid var(--gris-borde);
+.site-footer {
+  border-top: 1px solid #e5e7eb;
   background: var(--gris-clar);
-  padding: 20px 16px;
+  padding: 1.5rem 1rem;
+  font-size: 0.9rem;
 }
-.site-footer .footer-inner{
-  max-width: 1100px;
+
+.footer-inner {
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 16px;
+  text-align: center; /* centra contenido en móviles */
+}
+
+.footer-logos {
   display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-/* ---- Rail de logos con fade en bordes */
-.site-footer .footer-logos{
-  position: relative;
-  overflow: hidden;
-}
-
-/* Cortinillas de fade (desvanecer en los extremos) */
-.site-footer .footer-logos::before,
-.site-footer .footer-logos::after{
-  content:"";
-  position:absolute;
-  top:0; bottom:0; width:60px;
-  pointer-events:none;
-  z-index:2;
-}
-.site-footer .footer-logos::before{
-  left:0;
-  background: linear-gradient(to right, var(--gris-clar) 0%, rgba(244,244,244,0));
-}
-.site-footer .footer-logos::after{
-  right:0;
-  background: linear-gradient(to left, var(--gris-clar) 0%, rgba(244,244,244,0));
-}
-
-/* Pista (el JS la crea/mueve) — mismo spacing que en la plataforma */
-.site-footer .footer-logos .logo-track{
-  display: inline-flex;
+  justify-content: center;   /* centra horizontalmente */
   align-items: center;
   gap: 1.25rem;
-  padding: .25rem 0;
-  will-change: transform;
-  white-space: nowrap;
+  flex-wrap: wrap;
+  margin-bottom: 0.75rem;
 }
 
-/* Cada logo: padding lateral grande + altura base */
-.site-footer .footer-logos .logo-track .logo{
-  height: 70px;           /* usa 70px como en plataforma; baja a 56px si lo prefieres */
+.logo {
+  height: 56px; /* tamaño coherente */
   width: auto;
-  flex: 0 0 auto;
-  display: block;
-  object-fit: contain;
-  padding: .25rem 3.5rem; /* CLAVE: separa visualmente los logos (sumado al gap) */
-  opacity: .85;
-  transform: scale(.95);
-  transition: opacity .3s ease, transform .3s ease;
+  padding: .25rem .5rem;
 }
-.site-footer .footer-logos .logo-track .logo:hover{
-  opacity: 1;
-  transform: scale(1.05);
-}
+
 
 /* ---- Nota de financiación */
 .site-footer .funding-note{
@@ -102,6 +66,26 @@
   font-size: .95rem;
 }
 
+.logo-with-caption{
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .25rem;
+}
+
+.logo-caption{
+  font-size: .8rem;
+  line-height: 1.1;
+  color: var(--gris-fosc);
+  font-weight: 600;
+  text-align: center;
+}
+
+/* (Opcional) si quieres ajustarlo aún más para móviles */
+@media (max-width: 640px){
+  .logo-caption{ font-size: .75rem; }
+}
+
 /* ---- Responsive */
 @media (max-width: 640px){
   .site-footer{ padding: 16px; }
@@ -109,5 +93,20 @@
   .site-footer .footer-logos .logo-track .logo{
     height: 56px;
     padding: .25rem 2rem;
+  }
+}
+/* Responsive: ajusta espaciado en pantallas pequeñas */
+@media (max-width: 640px) {
+  .footer-logos {
+    gap: .75rem;
+  }
+  .logo {
+    height: 44px;
+  }
+  .funding-note {
+    font-size: 0.85rem;
+  }
+  .footer-links {
+    font-size: 0.8rem;
   }
 }

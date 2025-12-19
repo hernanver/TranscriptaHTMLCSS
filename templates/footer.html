@@ -28,10 +28,17 @@
           class="logo eu" height="56" loading="lazy">
       {% endif %}
 
-      <img
-        src="{{ url_for('static', filename='img/sctreball_h3.png') }}"
-        alt="{{ _('Generalitat de Catalunya - Secretaria de Treball') }}"
-        class="logo cat" height="56" loading="lazy">
+      <div class="logo-with-caption logo-with-caption--cat">
+          <span class="logo-caption">Amb el support de la Generalitat de Catalunya</span>
+
+          <img
+            src="{{ url_for('static', filename='img/empresa_h3.png') }}"
+            alt="Generalitat de Catalunya Document d'empresa i Treball"
+            class="logo cat"
+            height="56"
+            loading="lazy"
+          />
+        </div>
     </div>
 
     <!-- Nota -->
@@ -59,4 +66,4 @@
 <script>
   (function(){ var y=document.getElementById('copy-year'); if(y) y.textContent=(new Date()).getFullYear(); })();
 </script>
-<script src="{{ url_for('static', filename='js/footer-logos.js') }}"></script>
+<!--<script src="{{ url_for('static', filename='js/footer-logos.js') }}"></script>-->
