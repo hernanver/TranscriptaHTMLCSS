@@ -67,8 +67,8 @@ msgid "Enviar"
 msgstr "Send"
 
 #: templates/footer.html:2
-msgid "Finançament NextGenerationEU"
-msgstr "NextGenerationEU funding"
+msgid "Finançament Next GenerationEU"
+msgstr "Next GenerationEU funding"
 
 #: templates/footer.html:9
 msgid "Plan de Recuperación, Transformación y Resiliencia – Gobierno de España"
@@ -83,12 +83,12 @@ msgid "Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya
 msgstr "Recovery, Transformation and Resilience Plan – Government of Spain"
 
 #: templates/footer.html:22
-msgid "Funded by the European Union – NextGenerationEU"
-msgstr "Funded by the European Union – NextGenerationEU"
+msgid "Funded by the European Union – Next GenerationEU"
+msgstr "Funded by the European Union – Next GenerationEU"
 
 #: templates/footer.html:27
-msgid "Finançat per la Unió Europea – NextGenerationEU"
-msgstr "Funded by the European Union – NextGenerationEU"
+msgid "Finançat per la Unió Europea – Next GenerationEU"
+msgstr "Funded by the European Union – Next GenerationEU"
 
 #: templates/footer.html:33
 msgid "Generalitat de Catalunya - Secretaria de Treball"
@@ -99,8 +99,8 @@ msgid "Aquest projecte està "
 msgstr "This project is "
 
 #: templates/footer.html:39
-msgid "finançat per la Unió Europea – NextGenerationEU"
-msgstr "funded by the European Union – NextGenerationEU"
+msgid "finançat per la Unió Europea – Next Generation EU"
+msgstr "funded by the European Union – Next Generation EU"
 
 #: templates/footer.html:45
 msgid "Avís legal"
@@ -762,8 +762,8 @@ msgstr "DIRECT CONTACT"
 #~ " document amb un assistent especialitzat"
 #~ msgstr ""
 
-#~ msgid "Aquest projecte està finançat per la Unió Europea – NextGenerationEU."
-#~ msgstr "This project has been funded by the European Union – NextGenerationEU."
+#~ msgid "Aquest projecte està finançat per la Unió Europea – Next Generation EU."
+#~ msgstr "This project has been funded by the European Union – Next Generation EU."
 
 #~ msgid "Amb el suport de la Generalitat de Catalunya."
 #~ msgstr "With the support of the Government of Catalonia."

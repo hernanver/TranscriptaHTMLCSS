@@ -67,8 +67,8 @@ msgid "Enviar"
 msgstr "Enviar"
 
 #: templates/footer.html:2
-msgid "Finançament NextGenerationEU"
-msgstr "Financiación NextGenerationEU"
+msgid "Finançament Next Generation EU"
+msgstr "Financiación Next Generation EU"
 
 #: templates/footer.html:9
 msgid "Plan de Recuperación, Transformación y Resiliencia – Gobierno de España"
@@ -83,12 +83,12 @@ msgid "Pla de Recuperació, Transformació i Resiliència – Govern d’Espanya
 msgstr "Plan de Recuperación, Transformación y Resiliencia – Gobierno de España"
 
 #: templates/footer.html:22
-msgid "Funded by the European Union – NextGenerationEU"
-msgstr "Financiado por la Unión Europea – NextGenerationEU"
+msgid "Funded by the European Union – Next Generation EU"
+msgstr "Financiado por la Unión Europea – Next Generation EU"
 
 #: templates/footer.html:27
-msgid "Finançat per la Unió Europea – NextGenerationEU"
-msgstr "Financiado por la Unión Europea – NextGenerationEU"
+msgid "Finançat per la Unió Europea – Next Generation EU"
+msgstr "Financiado por la Unión Europea – Next Generation EU"
 
 #: templates/footer.html:33
 msgid "Generalitat de Catalunya - Secretaria de Treball"
@@ -99,8 +99,8 @@ msgid "Aquest projecte està "
 msgstr "Este proyecto está "
 
 #: templates/footer.html:39
-msgid "finançat per la Unió Europea – NextGenerationEU"
-msgstr "financiado por la Unión Europea – NextGenerationEU"
+msgid "finançat per la Unió Europea – Next Generation EU"
+msgstr "financiado por la Unión Europea – Next Generation EU"
 
 #: templates/footer.html:45
 msgid "Avís legal"
@@ -763,8 +763,8 @@ msgstr "CONTACTO DIRECTO"
 #~ " document amb un assistent especialitzat"
 #~ msgstr ""
 
-#~ msgid "Aquest projecte està finançat per la Unió Europea – NextGenerationEU."
-#~ msgstr "Este proyecto está financiado por la Unión Europea – NextGenerationEU."
+#~ msgid "Aquest projecte està finançat per la Unió Europea – Next Generation EU."
+#~ msgstr "Este proyecto está financiado por la Unión Europea – Next Generation EU."
 
 #~ msgid "Amb el suport de la Generalitat de Catalunya."
 #~ msgstr "Con el apoyo de la Generalitat de Catalunya."

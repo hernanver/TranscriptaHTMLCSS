@@ -19,17 +19,17 @@
       {% if get_locale() and get_locale().language == 'en' %}
         <img
           src="{{ url_for('static', filename='img/EN_FundedbytheEU_RGB_POS.png') }}"
-          alt="{{ _('Funded by the European Union – NextGenerationEU') }}"
+          alt="{{ _('Funded by the European Union – Next Generation EU') }}"
           class="logo eu" height="56" loading="lazy">
       {% else %}
         <img
           src="{{ url_for('static', filename='img/ES_FundedbytheEU_RGB_POS.png') }}"
-          alt="{{ _('Finançat per la Unió Europea – NextGenerationEU') }}"
+          alt="{{ _('Finançat per la Unió Europea – Next Generation EU') }}"
           class="logo eu" height="56" loading="lazy">
       {% endif %}
 
       <div class="logo-with-caption logo-with-caption--cat">
-          <span class="logo-caption">Amb el support de la Generalitat de Catalunya</span>
+          <span class="logo-caption">Amb el suport de la Generalitat de Catalunya</span>
 
           <img
             src="{{ url_for('static', filename='img/empresa_h3.png') }}"
@@ -43,7 +43,7 @@
 
     <!-- Nota -->
     <p class="funding-note">
-      {{ _('Aquest projecte està ') }}<strong>{{ _('finançat per la Unió Europea – NextGenerationEU') }}</strong>.
+      {{ _('Aquest projecte està ') }}<strong>{{ _('finançat per la Unió Europea – Next Generation EU') }}</strong>.
     </p>
 
     <!-- Enlaces legales y contacto (copiados de la plataforma) -->
